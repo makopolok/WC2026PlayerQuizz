@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const MAX_SCORE = 30; // 10 players × 3 pts
@@ -10,10 +11,38 @@ export default function Results() {
 
   const { shareId, totalScore, players, guesses } = state;
   const shareUrl = `${window.location.origin}/share/${shareId}`;
+  const [playerName, setPlayerName] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+  const [savedScore, setSavedScore] = useState(false);
 
   function copyLink() {
     navigator.clipboard.writeText(shareUrl);
     alert('Link copied!');
+  }
+
+  async function submitLeaderboardScore() {
+    setSubmitError(null);
+    if (!playerName.trim()) {
+      setSubmitError('Please enter a name.');
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/leaderboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: playerName.trim(), score: totalScore }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to save score.');
+      setSavedScore(true);
+    } catch (err) {
+      setSubmitError(err.message);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const emoji = totalScore >= 25 ? '🏆' : totalScore >= 15 ? '⭐' : '⚽';
@@ -39,6 +68,31 @@ export default function Results() {
             </div>
           );
         })}
+      </div>
+
+      <div className="w-full max-w-md bg-gray-900 rounded-xl px-4 py-4 flex flex-col gap-3">
+        <p className="text-gray-300 font-semibold">Submit your score to leaderboard</p>
+        <input
+          type="text"
+          value={playerName}
+          maxLength={24}
+          onChange={(e) => setPlayerName(e.target.value)}
+          placeholder="Your name"
+          disabled={savedScore || submitting}
+          className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-50"
+        />
+        {submitError && <p className="text-red-400 text-sm">❌ {submitError}</p>}
+        {savedScore ? (
+          <p className="text-green-400 text-sm">✅ Score saved!</p>
+        ) : (
+          <button
+            onClick={submitLeaderboardScore}
+            disabled={submitting}
+            className="bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 text-gray-900 font-bold py-2 px-6 rounded-full transition"
+          >
+            {submitting ? 'Saving…' : 'Save score'}
+          </button>
+        )}
       </div>
 
       {/* Share */}

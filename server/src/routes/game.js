@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
+const pool = require('../db/pool');
 
 const router = express.Router();
 
@@ -21,6 +22,7 @@ const allPlayers = Object.entries(playersByCountry).flatMap(([country, players])
 );
 
 const sessionStore = new Map();
+let leaderboardTableReady = null;
 
 function samplePlayers(players, count) {
   const copy = [...players];
@@ -29,6 +31,20 @@ function samplePlayers(players, count) {
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy.slice(0, count);
+}
+
+function ensureLeaderboardTable() {
+  if (!leaderboardTableReady) {
+    leaderboardTableReady = pool.query(`
+      CREATE TABLE IF NOT EXISTS leaderboard_entries (
+        id BIGSERIAL PRIMARY KEY,
+        name VARCHAR(24) NOT NULL CHECK (char_length(name) BETWEEN 1 AND 24),
+        score INTEGER NOT NULL CHECK (score BETWEEN 0 AND 30),
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+  }
+  return leaderboardTableReady;
 }
 
 // GET /api/game — start a new game, returns 10 random players (no country)
@@ -154,6 +170,76 @@ router.get('/countries', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to fetch countries.' });
+  }
+});
+
+// GET /api/leaderboard — top scores
+router.get('/leaderboard', async (req, res) => {
+  const limitRaw = Number.parseInt(req.query.limit, 10);
+  const limit = Number.isNaN(limitRaw) ? 10 : Math.max(1, Math.min(limitRaw, 50));
+
+  if (!process.env.DATABASE_URL) {
+    return res.status(503).json({ error: 'Leaderboard is not configured.' });
+  }
+
+  try {
+    await ensureLeaderboardTable();
+    const { rows } = await pool.query(
+      `SELECT id, name, score, created_at
+       FROM leaderboard_entries
+       ORDER BY score DESC, created_at ASC
+       LIMIT $1`,
+      [limit]
+    );
+    res.json(rows.map((row, index) => ({
+      rank: index + 1,
+      id: row.id,
+      name: row.name,
+      score: row.score,
+      createdAt: row.created_at,
+    })));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load leaderboard.' });
+  }
+});
+
+// POST /api/leaderboard — save a score
+router.post('/leaderboard', async (req, res) => {
+  const name = String(req.body?.name || '').trim();
+  const score = Number(req.body?.score);
+
+  if (!name) {
+    return res.status(400).json({ error: 'Name is required.' });
+  }
+  if (name.length > 24) {
+    return res.status(400).json({ error: 'Name must be 24 characters or less.' });
+  }
+  if (!Number.isInteger(score) || score < 0 || score > 30) {
+    return res.status(400).json({ error: 'Score must be an integer between 0 and 30.' });
+  }
+  if (!process.env.DATABASE_URL) {
+    return res.status(503).json({ error: 'Leaderboard is not configured.' });
+  }
+
+  try {
+    await ensureLeaderboardTable();
+    const { rows } = await pool.query(
+      `INSERT INTO leaderboard_entries (name, score)
+       VALUES ($1, $2)
+       RETURNING id, name, score, created_at`,
+      [name, score]
+    );
+    const saved = rows[0];
+    res.status(201).json({
+      id: saved.id,
+      name: saved.name,
+      score: saved.score,
+      createdAt: saved.created_at,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to save leaderboard entry.' });
   }
 });
 

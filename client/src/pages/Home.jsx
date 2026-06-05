@@ -1,10 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [leaders, setLeaders] = useState([]);
+  const [leaderboardError, setLeaderboardError] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/leaderboard?limit=10')
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Failed to load leaderboard');
+        setLeaders(data);
+      })
+      .catch((err) => {
+        setLeaderboardError(err.message);
+      });
+  }, []);
 
   async function startGame() {
     setLoading(true);
@@ -41,6 +55,26 @@ export default function Home() {
       >
         {loading ? 'Loading…' : 'Play Now'}
       </button>
+
+      <div className="mt-8 w-full max-w-md bg-gray-900 rounded-2xl p-5">
+        <h2 className="text-xl font-bold text-yellow-400 mb-3">🏅 Leaderboard</h2>
+        {leaderboardError ? (
+          <p className="text-sm text-gray-400">Leaderboard unavailable right now.</p>
+        ) : (
+          <div className="flex flex-col gap-2">
+            {leaders.length === 0 ? (
+              <p className="text-sm text-gray-400">No scores yet. Be the first!</p>
+            ) : (
+              leaders.map((entry) => (
+                <div key={entry.id} className="flex items-center justify-between bg-gray-800 rounded-lg px-3 py-2">
+                  <span className="text-sm text-gray-300">#{entry.rank} {entry.name}</span>
+                  <span className="font-bold text-yellow-400">{entry.score}</span>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
