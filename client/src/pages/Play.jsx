@@ -103,7 +103,7 @@ export default function Play() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4">
+    <div className="flex flex-col items-center justify-start min-h-screen gap-6 px-4 pt-8 pb-8">
       {/* Progress + score */}
       <div className="flex justify-between w-full max-w-md text-sm text-gray-400">
         <span>Player {currentIndex + 1} / {players.length}</span>
