@@ -1,0 +1,24 @@
+{
+  "name": "WC2026 Player Quiz",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [3001, 5173],
+  "portsAttributes": {
+    "3001": { "label": "API Server" },
+    "5173": { "label": "React Dev Server", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "npm run install:all",
+  "features": {
+    "ghcr.io/devcontainers/features/postgresql:1": {
+      "version": "15"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
