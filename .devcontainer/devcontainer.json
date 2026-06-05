@@ -6,12 +6,7 @@
     "3001": { "label": "API Server" },
     "5173": { "label": "React Dev Server", "onAutoForward": "openBrowser" }
   },
-  "postCreateCommand": "npm run install:all",
-  "features": {
-    "ghcr.io/devcontainers/features/postgresql:1": {
-      "version": "15"
-    }
-  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
