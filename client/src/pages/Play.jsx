@@ -98,7 +98,7 @@ export default function Play() {
       </div>
 
       {/* Player card */}
-      <div className="bg-gray-900 rounded-2xl p-6 w-full max-w-md flex flex-col items-center gap-4 shadow-xl">
+      <div key={currentPlayer.id} className="bg-gray-900 rounded-2xl p-6 w-full max-w-md flex flex-col items-center gap-4 shadow-xl">
         {/* Photo — hidden during guessing, revealed after */}
         {revealed ? (
           currentPlayer.photo_url ? (
