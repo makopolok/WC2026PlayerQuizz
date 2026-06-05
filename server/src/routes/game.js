@@ -47,6 +47,50 @@ function ensureLeaderboardTable() {
   return leaderboardTableReady;
 }
 
+async function upsertBestLeaderboardScore(name, score) {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+
+    const existingResult = await client.query(
+      `SELECT id, name, score, created_at
+       FROM leaderboard_entries
+       WHERE lower(name) = lower($1)
+       ORDER BY score DESC, created_at ASC
+       LIMIT 1
+       FOR UPDATE`,
+      [name]
+    );
+
+    const existing = existingResult.rows[0];
+    if (existing && existing.score >= score) {
+      await client.query('COMMIT');
+      return existing;
+    }
+
+    await client.query(
+      `DELETE FROM leaderboard_entries
+       WHERE lower(name) = lower($1)`,
+      [name]
+    );
+
+    const insertResult = await client.query(
+      `INSERT INTO leaderboard_entries (name, score)
+       VALUES ($1, $2)
+       RETURNING id, name, score, created_at`,
+      [name, score]
+    );
+
+    await client.query('COMMIT');
+    return insertResult.rows[0];
+  } catch (err) {
+    await client.query('ROLLBACK');
+    throw err;
+  } finally {
+    client.release();
+  }
+}
+
 // GET /api/game — start a new game, returns 10 random players (no country)
 router.get('/game', async (req, res) => {
   try {
@@ -196,13 +240,19 @@ router.get('/leaderboard', async (req, res) => {
   try {
     await ensureLeaderboardTable();
     const { rows } = await pool.query(
-      `SELECT id, name, score, created_at
+      `SELECT DISTINCT ON (lower(name)) id, name, score, created_at
        FROM leaderboard_entries
-       ORDER BY score DESC, created_at ASC
-       LIMIT $1`,
-      [limit]
+       ORDER BY lower(name), score DESC, created_at ASC
+       `,
+      []
     );
-    res.json(rows.map((row, index) => ({
+    const sorted = rows
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return new Date(a.created_at) - new Date(b.created_at);
+      })
+      .slice(0, limit);
+    res.json(sorted.map((row, index) => ({
       rank: index + 1,
       id: row.id,
       name: row.name,
@@ -235,13 +285,7 @@ router.post('/leaderboard', async (req, res) => {
 
   try {
     await ensureLeaderboardTable();
-    const { rows } = await pool.query(
-      `INSERT INTO leaderboard_entries (name, score)
-       VALUES ($1, $2)
-       RETURNING id, name, score, created_at`,
-      [name, score]
-    );
-    const saved = rows[0];
+    const saved = await upsertBestLeaderboardScore(name, score);
     res.status(201).json({
       id: saved.id,
       name: saved.name,
