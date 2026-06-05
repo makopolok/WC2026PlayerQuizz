@@ -11,6 +11,7 @@
     "dev:client": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "start": "cd server && npm start",
+    "heroku-prebuild": "npm install --prefix server",
     "heroku-postbuild": "cd client && npm install --include=dev && npm run build"
   }
 }
