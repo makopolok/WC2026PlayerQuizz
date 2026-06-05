@@ -33,10 +33,13 @@ export default function CountryInput({ onSubmit, disabled, excludedCountries = [
   function getMatches(v) {
     const query = v.trim();
     if (!query) return [];
-    const matches = query === '+'
-      ? countries
-      : countries.filter(c => c.toLowerCase().startsWith(query.toLowerCase()));
-    return matches.filter(country => !excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase())).slice(0, 8);
+    if (query === '+') {
+      return countries.slice(0, 48);
+    }
+    return countries
+      .filter(c => c.toLowerCase().startsWith(query.toLowerCase()))
+      .filter(country => !excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase()))
+      .slice(0, 8);
   }
 
   const topSuggestion = suggestions[activeIndex] || suggestions[0] || null;
