@@ -1,5 +1,5 @@
 {
-  "name": "WC2026 Player Quiz",
+  "name": "WC2026 Players Names Quizz",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "forwardPorts": [3001, 5173],
   "portsAttributes": {

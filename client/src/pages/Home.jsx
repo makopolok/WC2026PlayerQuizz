@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4">
-      <h1 className="text-5xl font-bold text-yellow-400">⚽ WC2026 Player Quiz</h1>
+      <h1 className="text-5xl font-bold text-yellow-400">⚽ WC2026 Players Names Quizz</h1>
       <p className="text-gray-400 text-lg text-center max-w-md">
         Can you guess the nationality of 10 World Cup 2026 players?
       </p>
