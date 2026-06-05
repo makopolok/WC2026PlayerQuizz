@@ -36,6 +36,7 @@ export default function Home() {
       <button
         onClick={startGame}
         disabled={loading}
+        autoFocus
         className="mt-4 bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 text-gray-900 font-bold py-3 px-10 rounded-full text-xl transition"
       >
         {loading ? 'Loading…' : 'Play Now'}
