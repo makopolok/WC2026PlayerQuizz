@@ -9,10 +9,26 @@ require('dotenv').config();
 const pool = require('./pool');
 
 const players = [
-  // Example entries — replace with full 1,248-player dataset
-  { name: 'Lionel Messi', country: 'Argentina', photo_url: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/messi.jpg', position: 'Forward' },
-  { name: 'Kylian Mbappé', country: 'France', photo_url: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/mbappe.jpg', position: 'Forward' },
-  { name: 'Erling Haaland', country: 'Norway', photo_url: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/haaland.jpg', position: 'Forward' },
+  { name: 'Lionel Messi', country: 'Argentina', photo_url: null, position: 'Forward' },
+  { name: 'Kylian Mbappé', country: 'France', photo_url: null, position: 'Forward' },
+  { name: 'Erling Haaland', country: 'Norway', photo_url: null, position: 'Forward' },
+  { name: 'Vinicius Jr.', country: 'Brazil', photo_url: null, position: 'Forward' },
+  { name: 'Jude Bellingham', country: 'England', photo_url: null, position: 'Midfielder' },
+  { name: 'Pedri', country: 'Spain', photo_url: null, position: 'Midfielder' },
+  { name: 'Rodri', country: 'Spain', photo_url: null, position: 'Midfielder' },
+  { name: 'Kevin De Bruyne', country: 'Belgium', photo_url: null, position: 'Midfielder' },
+  { name: 'Mohamed Salah', country: 'Egypt', photo_url: null, position: 'Forward' },
+  { name: 'Robert Lewandowski', country: 'Poland', photo_url: null, position: 'Forward' },
+  { name: 'Harry Kane', country: 'England', photo_url: null, position: 'Forward' },
+  { name: 'Lamine Yamal', country: 'Spain', photo_url: null, position: 'Forward' },
+  { name: 'Bukayo Saka', country: 'England', photo_url: null, position: 'Forward' },
+  { name: 'Phil Foden', country: 'England', photo_url: null, position: 'Midfielder' },
+  { name: 'Gianluigi Donnarumma', country: 'Italy', photo_url: null, position: 'Goalkeeper' },
+  { name: 'Virgil van Dijk', country: 'Netherlands', photo_url: null, position: 'Defender' },
+  { name: 'Rúben Dias', country: 'Portugal', photo_url: null, position: 'Defender' },
+  { name: 'Bernardo Silva', country: 'Portugal', photo_url: null, position: 'Midfielder' },
+  { name: 'Joshua Kimmich', country: 'Germany', photo_url: null, position: 'Midfielder' },
+  { name: 'Florian Wirtz', country: 'Germany', photo_url: null, position: 'Midfielder' },
 ];
 
 async function seed() {

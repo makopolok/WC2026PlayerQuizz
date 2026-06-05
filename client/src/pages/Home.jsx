@@ -1,12 +1,23 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   async function startGame() {
-    const res = await fetch('/api/game');
-    const data = await res.json();
-    navigate('/play', { state: { sessionId: data.sessionId, players: data.players } });
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/game');
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to start game');
+      navigate('/play', { state: { sessionId: data.sessionId, players: data.players } });
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
   }
 
   return (
@@ -21,11 +32,13 @@ export default function Home() {
         <span>🥈 2nd try = 2 pts</span>
         <span>🥉 3rd try = 1 pt</span>
       </div>
+      {error && <p className="text-red-400 text-sm">❌ {error}</p>}
       <button
         onClick={startGame}
-        className="mt-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 px-10 rounded-full text-xl transition"
+        disabled={loading}
+        className="mt-4 bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 text-gray-900 font-bold py-3 px-10 rounded-full text-xl transition"
       >
-        Play Now
+        {loading ? 'Loading…' : 'Play Now'}
       </button>
     </div>
   );
