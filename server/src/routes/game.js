@@ -1,32 +1,63 @@
 const express = require('express');
+const fs = require('fs');
+const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-const pool = require('../db/pool');
 
 const router = express.Router();
 
 const PLAYERS_PER_GAME = 10;
 const POINTS = { 1: 3, 2: 2, 3: 1 }; // attempt number → points
+const playersPath = path.join(__dirname, '../../../data/players.json');
+
+const playersByCountry = JSON.parse(fs.readFileSync(playersPath, 'utf8'));
+const allPlayers = Object.entries(playersByCountry).flatMap(([country, players]) =>
+  players.map(player => ({
+    id: `${country}-${player.number}`,
+    country,
+    name: player.name,
+    position: player.position || null,
+    photo_url: player.photo_url || null,
+  }))
+);
+
+const sessionStore = new Map();
+
+function samplePlayers(players, count) {
+  const copy = [...players];
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy.slice(0, count);
+}
 
 // GET /api/game — start a new game, returns 10 random players (no country)
 router.get('/game', async (req, res) => {
   try {
-    const { rows } = await pool.query(
-      'SELECT id, name, photo_url, position FROM players ORDER BY RANDOM() LIMIT $1',
-      [PLAYERS_PER_GAME]
-    );
-    if (rows.length < PLAYERS_PER_GAME) {
-      return res.status(503).json({ error: 'Not enough players in database.' });
+    if (allPlayers.length < PLAYERS_PER_GAME) {
+      return res.status(503).json({ error: 'Not enough players in players file.' });
     }
 
+    const selectedPlayers = samplePlayers(allPlayers, PLAYERS_PER_GAME);
     const sessionId = uuidv4();
-    const playerIds = rows.map(p => p.id);
+    const playerIds = selectedPlayers.map(p => p.id);
+    sessionStore.set(sessionId, {
+      id: sessionId,
+      player_ids: playerIds,
+      guesses: null,
+      total_score: null,
+      completed: false,
+      created_at: new Date().toISOString(),
+    });
 
-    await pool.query(
-      'INSERT INTO game_sessions (id, player_ids) VALUES ($1, $2)',
-      [sessionId, playerIds]
-    );
+    const responsePlayers = selectedPlayers.map(({ id, name, photo_url, position }) => ({
+      id,
+      name,
+      photo_url,
+      position,
+    }));
 
-    res.json({ sessionId, players: rows });
+    res.json({ sessionId, players: responsePlayers });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to start game.' });
@@ -45,18 +76,21 @@ router.post('/guess', async (req, res) => {
   }
 
   try {
-    const { rows } = await pool.query(
-      'SELECT country FROM players WHERE id = $1',
-      [playerId]
-    );
-    if (!rows.length) return res.status(404).json({ error: 'Player not found.' });
+    const session = sessionStore.get(sessionId);
+    if (!session) return res.status(404).json({ error: 'Session not found.' });
+    if (!session.player_ids.includes(playerId)) {
+      return res.status(400).json({ error: 'Player is not part of this session.' });
+    }
 
-    const correct = rows[0].country.toLowerCase() === guess.trim().toLowerCase();
+    const player = allPlayers.find(p => p.id === playerId);
+    if (!player) return res.status(404).json({ error: 'Player not found.' });
+
+    const correct = player.country.toLowerCase() === guess.trim().toLowerCase();
     const points = correct ? POINTS[attemptNumber] : 0;
     // Reveal the country on correct guess or on the final (3rd) wrong attempt
     const revealCountry = correct || attemptNumber === 3;
 
-    res.json({ correct, points, country: revealCountry ? rows[0].country : null });
+    res.json({ correct, points, country: revealCountry ? player.country : null });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to process guess.' });
@@ -73,10 +107,12 @@ router.post('/game/complete', async (req, res) => {
   }
 
   try {
-    await pool.query(
-      'UPDATE game_sessions SET guesses = $1, total_score = $2, completed = TRUE WHERE id = $3',
-      [JSON.stringify(guesses), totalScore, sessionId]
-    );
+    const session = sessionStore.get(sessionId);
+    if (!session) return res.status(404).json({ error: 'Session not found.' });
+
+    session.guesses = guesses;
+    session.total_score = totalScore;
+    session.completed = true;
     res.json({ shareId: sessionId });
   } catch (err) {
     console.error(err);
@@ -88,22 +124,13 @@ router.post('/game/complete', async (req, res) => {
 router.get('/game/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const sessionResult = await pool.query(
-      'SELECT id, player_ids, guesses, total_score, created_at FROM game_sessions WHERE id = $1 AND completed = TRUE',
-      [id]
-    );
-    if (!sessionResult.rows.length) {
+    const session = sessionStore.get(id);
+    if (!session || !session.completed) {
       return res.status(404).json({ error: 'Game not found.' });
     }
 
-    const session = sessionResult.rows[0];
-    const playerResult = await pool.query(
-      'SELECT id, name, country, photo_url, position FROM players WHERE id = ANY($1)',
-      [session.player_ids]
-    );
-
     // Return players in original order
-    const playerMap = Object.fromEntries(playerResult.rows.map(p => [p.id, p]));
+    const playerMap = Object.fromEntries(allPlayers.map(p => [p.id, p]));
     const players = session.player_ids.map(id => playerMap[id]);
 
     res.json({
@@ -122,10 +149,8 @@ router.get('/game/:id', async (req, res) => {
 // GET /api/countries — list all 48 WC2026 countries (for autocomplete)
 router.get('/countries', async (req, res) => {
   try {
-    const { rows } = await pool.query(
-      'SELECT DISTINCT country FROM players ORDER BY country'
-    );
-    res.json(rows.map(r => r.country));
+    const countries = Object.keys(playersByCountry).sort((a, b) => a.localeCompare(b));
+    res.json(countries);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to fetch countries.' });
