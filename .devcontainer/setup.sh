@@ -6,16 +6,25 @@ set -e
 echo "📦 Installing dependencies..."
 npm run install:all
 
+echo "🔧 Creating server .env from Codespace secrets..."
+cat > server/.env <<EOF
+DATABASE_URL=${DATABASE_URL}
+PORT=3001
+NODE_ENV=development
+CLIENT_URL=http://localhost:5173
+EOF
+
+if [ -z "${DATABASE_URL}" ]; then
+  echo "⚠️  DATABASE_URL secret not set. Edit server/.env manually."
+else
+  echo "✅ .env created from secrets!"
+  echo "📋 Applying schema..."
+  node server/src/db/migrate.js
+  echo "🌱 Seeding players..."
+  node server/src/db/seed.js
+fi
+
 echo ""
-echo "✅ Dependencies installed!"
-echo ""
-echo "⚠️  Next step: set up your database connection"
-echo "   1. Go to https://neon.tech and create a free PostgreSQL database"
-echo "   2. Copy your connection string"
-echo "   3. Run: cp server/.env.example server/.env"
-echo "   4. Edit server/.env and set DATABASE_URL=<your neon connection string>"
-echo "   5. Run: node server/src/db/migrate.js   (applies schema)"
-echo ""
-echo "Then start the app:"
-echo "   Terminal 1: npm run dev:server"
-echo "   Terminal 2: npm run dev:client"
+echo "🚀 Ready! Open two terminals and run:"
+echo "   npm run dev:server"
+echo "   npm run dev:client"
