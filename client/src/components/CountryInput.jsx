@@ -24,15 +24,13 @@ export default function CountryInput({ onSubmit, disabled }) {
   }, [disabled]);
 
   function getMatches(v) {
-    if (!v) return [];
-    return countries.filter(c => c.toLowerCase().startsWith(v.toLowerCase())).slice(0, 8);
+    const query = v.trim();
+    if (!query) return [];
+    if (query === '+') return countries;
+    return countries.filter(c => c.toLowerCase().startsWith(query.toLowerCase())).slice(0, 8);
   }
 
-  // The value shown in the input: typed + inline completion suffix
   const topSuggestion = suggestions[activeIndex] || suggestions[0] || null;
-  const inlineCompletion = topSuggestion && topSuggestion.toLowerCase().startsWith(typed.toLowerCase())
-    ? topSuggestion
-    : typed;
 
   function handleChange(e) {
     const v = e.target.value;
@@ -51,16 +49,18 @@ export default function CountryInput({ onSubmit, disabled }) {
   function handleKeyDown(e) {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
+      if (!suggestions.length) return;
       setActiveIndex(i => Math.min(i + 1, suggestions.length - 1));
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
+      if (!suggestions.length) return;
       setActiveIndex(i => Math.max(i - 1, 0));
     } else if (e.key === 'Tab' || e.key === 'ArrowRight') {
-      // Accept inline completion
-      if (topSuggestion && typed.length < topSuggestion.length) {
+      // Accept top suggestion
+      if (topSuggestion && typed.toLowerCase() !== topSuggestion.toLowerCase()) {
         e.preventDefault();
         setTyped(topSuggestion);
-        setSuggestions([]);
+        setSuggestions(getMatches(topSuggestion));
       }
     } else if (e.key === 'Enter') {
       e.preventDefault();
@@ -77,17 +77,6 @@ export default function CountryInput({ onSubmit, disabled }) {
     }
   }
 
-  // After render, select the inline-completed suffix so typing replaces it
-  useEffect(() => {
-    const input = inputRef.current;
-    if (!input || !topSuggestion || typed.length === 0) return;
-    if (document.activeElement !== input) return;
-    // Set selection: typed portion is unselected, completion is selected
-    if (topSuggestion.toLowerCase().startsWith(typed.toLowerCase())) {
-      input.setSelectionRange(typed.length, topSuggestion.length);
-    }
-  });
-
   // Scroll active item into view
   useEffect(() => {
     if (listRef.current) {
@@ -101,15 +90,15 @@ export default function CountryInput({ onSubmit, disabled }) {
       <input
         ref={inputRef}
         type="text"
-        value={inlineCompletion}
+        value={typed}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         disabled={disabled}
-        placeholder="Type a country…"
+        placeholder="Type a country (or + for all)…"
         className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-40"
         autoComplete="off"
       />
-      {suggestions.length > 1 && (
+      {suggestions.length > 0 && (
         <ul
           ref={listRef}
           className="absolute z-10 w-full bg-gray-800 border border-gray-600 rounded-xl mt-1 overflow-y-auto shadow-lg max-h-52"
