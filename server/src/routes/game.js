@@ -60,6 +60,7 @@ router.get('/game', async (req, res) => {
     sessionStore.set(sessionId, {
       id: sessionId,
       player_ids: playerIds,
+      used_guesses: {},
       guesses: null,
       total_score: null,
       completed: false,
@@ -101,10 +102,20 @@ router.post('/guess', async (req, res) => {
     const player = allPlayers.find(p => p.id === playerId);
     if (!player) return res.status(404).json({ error: 'Player not found.' });
 
-    const correct = player.country.toLowerCase() === guess.trim().toLowerCase();
+    const normalizedGuess = guess.trim().toLowerCase();
+    const usedGuesses = session.used_guesses[playerId] || [];
+    if (usedGuesses.includes(normalizedGuess)) {
+      return res.status(409).json({ error: 'This country was already guessed for this player.' });
+    }
+
+    const correct = player.country.toLowerCase() === normalizedGuess;
     const points = correct ? POINTS[attemptNumber] : 0;
     // Reveal the country on correct guess or on the final (3rd) wrong attempt
     const revealCountry = correct || attemptNumber === 3;
+
+    if (!correct) {
+      session.used_guesses[playerId] = [...usedGuesses, normalizedGuess];
+    }
 
     res.json({ correct, points, country: revealCountry ? player.country : null });
   } catch (err) {

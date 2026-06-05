@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-export default function CountryInput({ onSubmit, disabled }) {
+export default function CountryInput({ onSubmit, disabled, excludedCountries = [] }) {
   const [typed, setTyped] = useState('');
   const [countries, setCountries] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -23,11 +23,20 @@ export default function CountryInput({ onSubmit, disabled }) {
     }
   }, [disabled]);
 
+  useEffect(() => {
+    if (typed.trim()) {
+      setSuggestions(getMatches(typed));
+      setActiveIndex(0);
+    }
+  }, [excludedCountries]);
+
   function getMatches(v) {
     const query = v.trim();
     if (!query) return [];
-    if (query === '+') return countries;
-    return countries.filter(c => c.toLowerCase().startsWith(query.toLowerCase())).slice(0, 8);
+    const matches = query === '+'
+      ? countries
+      : countries.filter(c => c.toLowerCase().startsWith(query.toLowerCase()));
+    return matches.filter(country => !excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase())).slice(0, 8);
   }
 
   const topSuggestion = suggestions[activeIndex] || suggestions[0] || null;

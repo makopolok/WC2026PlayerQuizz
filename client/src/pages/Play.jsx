@@ -16,6 +16,7 @@ export default function Play() {
   const [feedback, setFeedback] = useState(null); // 'correct' | 'wrong' | 'out'
   const [revealed, setRevealed] = useState(false); // photo + info shown after guess resolves
   const [revealedCountry, setRevealedCountry] = useState(null);
+  const [usedCountries, setUsedCountries] = useState([]);
 
   useEffect(() => {
     if (!players) navigate('/');
@@ -34,6 +35,15 @@ export default function Play() {
     });
     const data = await res.json();
 
+    if (!res.ok) {
+      if (res.status === 409) {
+        setFeedback('duplicate');
+        setTimeout(() => setFeedback(null), 1200);
+        return;
+      }
+      throw new Error(data.error || 'Failed to submit guess');
+    }
+
     if (data.correct) {
       const pts = POINTS_MAP[attemptNumber];
       setTotalScore(s => s + pts);
@@ -44,9 +54,11 @@ export default function Play() {
       const newGuess = { playerId: currentPlayer.id, attempts: attemptNumber, points: pts };
       const updatedGuesses = [...guesses, newGuess];
       setGuesses(updatedGuesses);
+      setUsedCountries([]);
 
       setTimeout(() => advance(updatedGuesses), 2000);
     } else {
+      setUsedCountries(prev => [...prev, guess.trim()]);
       if (attemptNumber === 3) {
         setFeedback('out');
         setRevealedCountry(data.country); // API now returns country on final attempt
@@ -70,6 +82,7 @@ export default function Play() {
     setRevealedCountry(null);
     setRevealed(false);
     setAttemptNumber(1);
+    setUsedCountries([]);
 
     if (isLastPlayer) {
       completeGame(updatedGuesses);
@@ -100,20 +113,12 @@ export default function Play() {
       {/* Player card */}
       <div key={currentPlayer.id} className="bg-gray-900 rounded-2xl p-6 w-full max-w-md flex flex-col items-center gap-4 shadow-xl">
         {/* Photo — hidden during guessing, revealed after */}
-        {revealed ? (
-          currentPlayer.photo_url ? (
-            <img
-              src={currentPlayer.photo_url}
-              alt={currentPlayer.name}
-              className="w-40 h-40 object-cover rounded-full border-4 border-yellow-400"
-            />
-          ) : (
-            <div className="w-40 h-40 rounded-full bg-gray-700 flex items-center justify-center text-5xl">⚽</div>
-          )
-        ) : (
-          <div className="w-40 h-40 rounded-full bg-gray-800 border-4 border-gray-600 flex items-center justify-center text-5xl select-none">
-            ❓
-          </div>
+        {revealed && currentPlayer.photo_url && (
+          <img
+            src={currentPlayer.photo_url}
+            alt={currentPlayer.name}
+            className="w-40 h-40 object-cover rounded-full border-4 border-yellow-400"
+          />
         )}
 
         <h2 className="text-2xl font-bold">{currentPlayer.name}</h2>
@@ -147,8 +152,11 @@ export default function Play() {
             {feedback === 'wrong' && (
               <p className="text-red-400 font-semibold text-sm">❌ Wrong! Try again…</p>
             )}
+            {feedback === 'duplicate' && (
+              <p className="text-red-400 font-semibold text-sm">❌ You already tried that country.</p>
+            )}
 
-            <CountryInput onSubmit={handleGuess} disabled={feedback === 'wrong'} />
+            <CountryInput onSubmit={handleGuess} disabled={feedback === 'wrong'} excludedCountries={usedCountries} />
           </>
         )}
       </div>
