@@ -1,7 +1,7 @@
 -- Players table
 CREATE TABLE IF NOT EXISTS players (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL UNIQUE,
   country VARCHAR(100) NOT NULL,
   photo_url TEXT,
   position VARCHAR(50),

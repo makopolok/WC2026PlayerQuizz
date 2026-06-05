@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
 export default function CountryInput({ onSubmit, disabled }) {
-  const [value, setValue] = useState('');
+  const [typed, setTyped] = useState('');
   const [countries, setCountries] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef(null);
   const listRef = useRef(null);
 
@@ -16,27 +16,35 @@ export default function CountryInput({ onSubmit, disabled }) {
 
   useEffect(() => {
     if (!disabled) {
-      setValue('');
+      setTyped('');
       setSuggestions([]);
-      setActiveIndex(-1);
+      setActiveIndex(0);
       inputRef.current?.focus();
     }
   }, [disabled]);
 
+  function getMatches(v) {
+    if (!v) return [];
+    return countries.filter(c => c.toLowerCase().startsWith(v.toLowerCase())).slice(0, 8);
+  }
+
+  // The value shown in the input: typed + inline completion suffix
+  const topSuggestion = suggestions[activeIndex] || suggestions[0] || null;
+  const inlineCompletion = topSuggestion && topSuggestion.toLowerCase().startsWith(typed.toLowerCase())
+    ? topSuggestion
+    : typed;
+
   function handleChange(e) {
     const v = e.target.value;
-    setValue(v);
-    setActiveIndex(-1);
-    if (v.length < 1) { setSuggestions([]); return; }
-    setSuggestions(
-      countries.filter(c => c.toLowerCase().startsWith(v.toLowerCase())).slice(0, 8)
-    );
+    setTyped(v);
+    setActiveIndex(0);
+    setSuggestions(getMatches(v));
   }
 
   function handleSelect(country) {
-    setValue(country);
+    setTyped(country);
     setSuggestions([]);
-    setActiveIndex(-1);
+    setActiveIndex(0);
     onSubmit(country);
   }
 
@@ -46,24 +54,43 @@ export default function CountryInput({ onSubmit, disabled }) {
       setActiveIndex(i => Math.min(i + 1, suggestions.length - 1));
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setActiveIndex(i => Math.max(i - 1, -1));
+      setActiveIndex(i => Math.max(i - 1, 0));
+    } else if (e.key === 'Tab' || e.key === 'ArrowRight') {
+      // Accept inline completion
+      if (topSuggestion && typed.length < topSuggestion.length) {
+        e.preventDefault();
+        setTyped(topSuggestion);
+        setSuggestions([]);
+      }
     } else if (e.key === 'Enter') {
       e.preventDefault();
-      if (activeIndex >= 0 && suggestions[activeIndex]) {
-        handleSelect(suggestions[activeIndex]);
-      } else if (value.trim()) {
+      const selected = suggestions[activeIndex] || topSuggestion;
+      if (selected) {
+        handleSelect(selected);
+      } else if (typed.trim()) {
         setSuggestions([]);
-        onSubmit(value.trim());
+        onSubmit(typed.trim());
       }
     } else if (e.key === 'Escape') {
       setSuggestions([]);
-      setActiveIndex(-1);
+      setActiveIndex(0);
     }
   }
 
+  // After render, select the inline-completed suffix so typing replaces it
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input || !topSuggestion || typed.length === 0) return;
+    if (document.activeElement !== input) return;
+    // Set selection: typed portion is unselected, completion is selected
+    if (topSuggestion.toLowerCase().startsWith(typed.toLowerCase())) {
+      input.setSelectionRange(typed.length, topSuggestion.length);
+    }
+  });
+
   // Scroll active item into view
   useEffect(() => {
-    if (activeIndex >= 0 && listRef.current) {
+    if (listRef.current) {
       const item = listRef.current.children[activeIndex];
       item?.scrollIntoView({ block: 'nearest' });
     }
@@ -74,7 +101,7 @@ export default function CountryInput({ onSubmit, disabled }) {
       <input
         ref={inputRef}
         type="text"
-        value={activeIndex >= 0 ? suggestions[activeIndex] : value}
+        value={inlineCompletion}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         disabled={disabled}
@@ -82,7 +109,7 @@ export default function CountryInput({ onSubmit, disabled }) {
         className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-40"
         autoComplete="off"
       />
-      {suggestions.length > 0 && (
+      {suggestions.length > 1 && (
         <ul
           ref={listRef}
           className="absolute z-10 w-full bg-gray-800 border border-gray-600 rounded-xl mt-1 overflow-y-auto shadow-lg max-h-52"
