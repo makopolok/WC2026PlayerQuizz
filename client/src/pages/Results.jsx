@@ -15,6 +15,7 @@ export default function Results() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [savedScore, setSavedScore] = useState(false);
+  const [leaderboardMessage, setLeaderboardMessage] = useState(null);
 
   function copyLink() {
     navigator.clipboard.writeText(shareUrl);
@@ -23,6 +24,7 @@ export default function Results() {
 
   async function submitLeaderboardScore() {
     setSubmitError(null);
+    setLeaderboardMessage(null);
     if (!playerName.trim()) {
       setSubmitError('Please enter a name.');
       return;
@@ -37,7 +39,18 @@ export default function Results() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to save score.');
-      setSavedScore(true);
+      if (data.saved) {
+        setSavedScore(true);
+        setLeaderboardMessage(
+          data.firstTime
+            ? `✅ Saved! You're on the leaderboard with ${data.bestScore} pts.`
+            : `✅ New best score saved: ${data.bestScore} pts.`
+        );
+      } else {
+        setLeaderboardMessage(
+          `💡 Your best score is ${data.bestScore} pts. Try again to beat your own best score.`
+        );
+      }
     } catch (err) {
       setSubmitError(err.message);
     } finally {
@@ -82,9 +95,12 @@ export default function Results() {
           className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-50"
         />
         {submitError && <p className="text-red-400 text-sm">❌ {submitError}</p>}
-        {savedScore ? (
-          <p className="text-green-400 text-sm">✅ Score saved!</p>
-        ) : (
+        {leaderboardMessage && (
+          <p className={savedScore ? 'text-green-400 text-sm' : 'text-yellow-400 text-sm'}>
+            {leaderboardMessage}
+          </p>
+        )}
+        {!savedScore && (
           <button
             onClick={submitLeaderboardScore}
             disabled={submitting}

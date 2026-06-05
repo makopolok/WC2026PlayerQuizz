@@ -65,7 +65,12 @@ async function upsertBestLeaderboardScore(name, score) {
     const existing = existingResult.rows[0];
     if (existing && existing.score >= score) {
       await client.query('COMMIT');
-      return existing;
+      return {
+        saved: false,
+        firstTime: false,
+        bestScore: existing.score,
+        entry: existing,
+      };
     }
 
     await client.query(
@@ -82,7 +87,12 @@ async function upsertBestLeaderboardScore(name, score) {
     );
 
     await client.query('COMMIT');
-    return insertResult.rows[0];
+    return {
+      saved: true,
+      firstTime: !existing,
+      bestScore: insertResult.rows[0].score,
+      entry: insertResult.rows[0],
+    };
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
@@ -285,12 +295,15 @@ router.post('/leaderboard', async (req, res) => {
 
   try {
     await ensureLeaderboardTable();
-    const saved = await upsertBestLeaderboardScore(name, score);
-    res.status(201).json({
-      id: saved.id,
-      name: saved.name,
-      score: saved.score,
-      createdAt: saved.created_at,
+    const result = await upsertBestLeaderboardScore(name, score);
+    res.status(result.saved ? 201 : 200).json({
+      id: result.entry.id,
+      name: result.entry.name,
+      score: result.entry.score,
+      createdAt: result.entry.created_at,
+      saved: result.saved,
+      firstTime: result.firstTime,
+      bestScore: result.bestScore,
     });
   } catch (err) {
     console.error(err);
