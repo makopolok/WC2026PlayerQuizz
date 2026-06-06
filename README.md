@@ -11,7 +11,7 @@ Guess the nationality of 10 World Cup 2026 players. 3 tries per player — faste
 
 ## Versions
 
-- **Beta**: 1.1
+- **Beta**: 1.2
 
 ---
 
