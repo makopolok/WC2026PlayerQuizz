@@ -37,8 +37,15 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <div
-        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-20 pointer-events-none"
-        style={{ backgroundImage: "url('/8bit-trophy.png')" }}
+        className="absolute bottom-0 right-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/8bit-trophy-transparent.png')",
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom right',
+          width: '280px',
+          height: '280px',
+          opacity: 0.4,
+        }}
       />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-6 px-4">
 
