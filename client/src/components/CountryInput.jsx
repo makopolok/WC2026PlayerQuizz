@@ -17,17 +17,15 @@ export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCo
   useEffect(() => {
     if (!disabled) {
       setTyped('');
-      setSuggestions([]);
+      setSuggestions(getMatches(''));
       setActiveIndex(0);
       inputRef.current?.focus();
     }
   }, [disabled]);
 
   useEffect(() => {
-    if (typed.trim()) {
-      setSuggestions(getMatches(typed));
-      setActiveIndex(0);
-    }
+    setSuggestions(getMatches(typed));
+    setActiveIndex(0);
   }, [excludedCountries]);
 
   const countryLookup = useMemo(() => {
@@ -40,10 +38,10 @@ export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCo
 
   function getMatches(v) {
     const query = v.trim();
-    if (!query) return [];
-    if (query === '+') {
-      return countries.slice(0, 48);
-    }
+    const availableCountries = countries.filter(
+      country => !excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase())
+    );
+    if (!query || query === '+') return availableCountries.slice(0, 48);
     return countries
       .filter(c => c.toLowerCase().startsWith(query.toLowerCase()))
       .filter(country => !excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase()))
@@ -58,6 +56,13 @@ export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCo
     setActiveIndex(0);
     setSuggestions(getMatches(v));
   }
+
+  useEffect(() => {
+    if (!typed.trim()) {
+      setSuggestions(getMatches(''));
+      setActiveIndex(0);
+    }
+  }, [countries, excludedCountries]);
 
   function handleSelect(country) {
     if (isExcluded(country)) {
@@ -124,7 +129,7 @@ export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCo
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         disabled={disabled}
-        placeholder="Type a country (or + for all)…"
+        placeholder="Type a country…"
         className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-40"
         autoComplete="off"
       />
