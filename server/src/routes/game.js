@@ -212,7 +212,7 @@ router.post('/game/complete', async (req, res) => {
   }
 });
 
-// GET /api/game/:id — load a shared game result
+// GET /api/game/:id — load share metadata (without revealing answers)
 router.get('/game/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -221,15 +221,10 @@ router.get('/game/:id', async (req, res) => {
       return res.status(404).json({ error: 'Game not found.' });
     }
 
-    // Return players in original order
-    const playerMap = Object.fromEntries(allPlayers.map(p => [p.id, p]));
-    const players = session.player_ids.map(id => playerMap[id]);
-
     res.json({
       id: session.id,
-      players,
-      guesses: session.guesses,
       totalScore: session.total_score,
+      questionsCount: session.player_ids.length,
       createdAt: session.created_at,
     });
   } catch (err) {
