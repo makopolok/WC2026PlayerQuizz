@@ -39,8 +39,16 @@ export default function Home() {
       <img
         src="/8bit-trophy-transparent.png"
         alt=""
-        className="absolute bottom-0 right-0 pointer-events-none opacity-40"
-        style={{ width: '220px', height: 'auto' }}
+        className="absolute pointer-events-none"
+        style={{
+          width: '380px',
+          height: 'auto',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -68%)',
+          opacity: 0.12,
+          zIndex: 0,
+        }}
       />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-6 px-4">
 
