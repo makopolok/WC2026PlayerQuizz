@@ -112,7 +112,14 @@ export default function Play() {
       body: JSON.stringify({ sessionId, guesses: finalGuesses, totalScore: score }),
     });
     const data = await res.json();
-    navigate('/results', { state: { shareId: data.shareId, totalScore: score, players, guesses: finalGuesses } });
+    navigate('/results', {
+      state: {
+        shareId: data.shareId,
+        totalScore: score,
+        players: data.players || players,
+        guesses: finalGuesses,
+      },
+    });
   }
 
   return (

@@ -17,6 +17,7 @@ const allPlayers = Object.entries(playersByCountry).flatMap(([country, players])
     id: `${country}-${player.number}`,
     country,
     name: player.name,
+    club: player.club || null,
     position: player.position || null,
     photo_url: player.photo_url || null,
   }))
@@ -56,6 +57,21 @@ function createGameSession(selectedPlayers) {
       position,
     })),
   };
+}
+
+function getSessionPlayersWithDetails(session) {
+  const playerMap = Object.fromEntries(allPlayers.map(player => [player.id, player]));
+  return session.player_ids
+    .map(playerId => playerMap[playerId])
+    .filter(Boolean)
+    .map(({ id, name, country, club, position, photo_url }) => ({
+      id,
+      name,
+      country,
+      club,
+      position,
+      photo_url,
+    }));
 }
 
 function ensureLeaderboardTable() {
@@ -205,7 +221,8 @@ router.post('/game/complete', async (req, res) => {
     session.guesses = guesses;
     session.total_score = totalScore;
     session.completed = true;
-    res.json({ shareId: sessionId });
+    const players = getSessionPlayersWithDetails(session);
+    res.json({ shareId: sessionId, players });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to save game.' });
@@ -254,10 +271,7 @@ router.post('/game/:id/rematch', async (req, res) => {
       return res.status(404).json({ error: 'Game not found.' });
     }
 
-    const playerMap = Object.fromEntries(allPlayers.map(player => [player.id, player]));
-    const selectedPlayers = session.player_ids
-      .map(playerId => playerMap[playerId])
-      .filter(Boolean);
+    const selectedPlayers = getSessionPlayersWithDetails(session);
 
     if (selectedPlayers.length !== session.player_ids.length) {
       return res.status(500).json({ error: 'Shared game is missing player data.' });

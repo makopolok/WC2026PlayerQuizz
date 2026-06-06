@@ -74,6 +74,10 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <p className="text-xs text-gray-500 text-center">
+        Beta 1.1
+      </p>
     </div>
   );
 }

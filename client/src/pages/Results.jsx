@@ -71,10 +71,16 @@ export default function Results() {
       <div className="w-full max-w-md flex flex-col gap-2">
         {players.map((player, i) => {
           const g = guesses[i];
+          const country = player.country || 'Unknown country';
+          const club = player.club || 'Unknown club';
           return (
             <div key={player.id} className="bg-gray-900 rounded-xl px-4 py-3 flex justify-between items-center">
-              <span className="font-semibold">{player.name}</span>
-              <span className="text-sm text-gray-400">{player.country}</span>
+              <div className="min-w-0 pr-3">
+                <p className="font-semibold truncate">{player.name}</p>
+                <p className="text-xs text-gray-400 truncate">
+                  {country} • {club}
+                </p>
+              </div>
               <span className={`font-bold ${g?.points > 0 ? 'text-green-400' : 'text-red-400'}`}>
                 {g?.points > 0 ? `+${g.points}` : '0'} pts
               </span>

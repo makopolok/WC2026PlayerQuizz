@@ -9,6 +9,10 @@ Guess the nationality of 10 World Cup 2026 players. 3 tries per player — faste
 - **Database**: PostgreSQL (Heroku Postgres)
 - **Images**: Cloudinary
 
+## Versions
+
+- **Beta**: 1.1
+
 ---
 
 ## Local Setup
