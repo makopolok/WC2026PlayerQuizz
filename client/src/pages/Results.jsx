@@ -113,12 +113,12 @@ export default function Results() {
 
       {/* Share */}
       <div className="flex flex-col items-center gap-3 mt-4">
-        <p className="text-gray-400 text-sm">Challenge your friends!</p>
+        <p className="text-gray-400 text-sm">Challenge your friends with the same quiz!</p>
         <button
           onClick={copyLink}
           className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
         >
-          📋 Copy Share Link
+          📋 Copy Challenge Link
         </button>
         <button
           onClick={() => navigate('/')}

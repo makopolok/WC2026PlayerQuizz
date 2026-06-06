@@ -8,6 +8,8 @@ export default function Share() {
   const navigate = useNavigate();
   const [game, setGame] = useState(null);
   const [error, setError] = useState(null);
+  const [startingChallenge, setStartingChallenge] = useState(false);
+  const [challengeError, setChallengeError] = useState(null);
 
   useEffect(() => {
     fetch(`/api/game/${id}`)
@@ -32,11 +34,28 @@ export default function Share() {
 
   const emoji = game.totalScore >= 25 ? '🏆' : game.totalScore >= 15 ? '⭐' : '⚽';
 
+  async function startChallenge() {
+    setStartingChallenge(true);
+    setChallengeError(null);
+    try {
+      const res = await fetch(`/api/game/${id}/rematch`, { method: 'POST' });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to start challenge.');
+      navigate('/play', { state: { sessionId: data.sessionId, players: data.players } });
+    } catch (err) {
+      setChallengeError(err.message);
+      setStartingChallenge(false);
+    }
+  }
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 py-10">
-      <h1 className="text-3xl font-bold text-yellow-400">{emoji} A friend's result</h1>
+      <h1 className="text-3xl font-bold text-yellow-400">{emoji} Challenge accepted!</h1>
       <p className="text-xl">
-        Score: <strong className="text-yellow-400">{game.totalScore}</strong> / {MAX_SCORE}
+        Original score: <strong className="text-yellow-400">{game.totalScore}</strong> / {MAX_SCORE}
+      </p>
+      <p className="text-gray-400 text-center max-w-md">
+        Play the exact same set of players and see if you can beat this result.
       </p>
 
       <div className="w-full max-w-md flex flex-col gap-2">
@@ -55,11 +74,13 @@ export default function Share() {
       </div>
 
       <button
-        onClick={() => navigate('/')}
-        className="mt-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
+        onClick={startChallenge}
+        disabled={startingChallenge}
+        className="mt-4 bg-yellow-400 hover:bg-yellow-300 disabled:opacity-50 text-gray-900 font-bold py-2 px-8 rounded-full transition"
       >
-        Play yourself!
+        {startingChallenge ? 'Starting…' : 'Play this same quiz'}
       </button>
+      {challengeError && <p className="text-red-400 text-sm">{challengeError}</p>}
     </div>
   );
 }

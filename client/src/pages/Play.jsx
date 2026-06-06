@@ -17,10 +17,17 @@ export default function Play() {
   const [revealed, setRevealed] = useState(false); // photo + info shown after guess resolves
   const [revealedCountry, setRevealedCountry] = useState(null);
   const [usedCountries, setUsedCountries] = useState([]);
+  const [guessError, setGuessError] = useState(null);
 
   useEffect(() => {
     if (!players) navigate('/');
   }, [players, navigate]);
+
+  useEffect(() => {
+    if (!guessError) return undefined;
+    const timer = setTimeout(() => setGuessError(null), 1500);
+    return () => clearTimeout(timer);
+  }, [guessError]);
 
   if (!players) return null;
 
@@ -28,6 +35,7 @@ export default function Play() {
   const isLastPlayer = currentIndex === players.length - 1;
 
   async function handleGuess(guess) {
+    setGuessError(null);
     const res = await fetch('/api/guess', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -39,6 +47,11 @@ export default function Play() {
       if (res.status === 409) {
         setFeedback('duplicate');
         setTimeout(() => setFeedback(null), 1200);
+        return;
+      }
+      if (res.status === 400) {
+        setGuessError(data.error || 'Please choose a country from the list.');
+        setTimeout(() => setGuessError(null), 1500);
         return;
       }
       throw new Error(data.error || 'Failed to submit guess');
@@ -155,8 +168,16 @@ export default function Play() {
             {feedback === 'duplicate' && (
               <p className="text-red-400 font-semibold text-sm">❌ You already tried that country.</p>
             )}
+            {guessError && (
+              <p className="text-red-400 font-semibold text-sm">❌ {guessError}</p>
+            )}
 
-            <CountryInput onSubmit={handleGuess} disabled={feedback === 'wrong'} excludedCountries={usedCountries} />
+            <CountryInput
+              onSubmit={handleGuess}
+              onInvalid={setGuessError}
+              disabled={feedback === 'wrong'}
+              excludedCountries={usedCountries}
+            />
           </>
         )}
       </div>

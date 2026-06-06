@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 
-export default function CountryInput({ onSubmit, disabled, excludedCountries = [] }) {
+export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCountries = [] }) {
   const [typed, setTyped] = useState('');
   const [countries, setCountries] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -30,6 +30,14 @@ export default function CountryInput({ onSubmit, disabled, excludedCountries = [
     }
   }, [excludedCountries]);
 
+  const countryLookup = useMemo(() => {
+    return new Map(countries.map(country => [country.toLowerCase(), country]));
+  }, [countries]);
+
+  function isExcluded(country) {
+    return excludedCountries.some(excluded => excluded.toLowerCase() === country.toLowerCase());
+  }
+
   function getMatches(v) {
     const query = v.trim();
     if (!query) return [];
@@ -52,6 +60,11 @@ export default function CountryInput({ onSubmit, disabled, excludedCountries = [
   }
 
   function handleSelect(country) {
+    if (isExcluded(country)) {
+      onInvalid?.('You already tried that country.');
+      setSuggestions([]);
+      return;
+    }
     setTyped(country);
     setSuggestions([]);
     setActiveIndex(0);
@@ -80,8 +93,13 @@ export default function CountryInput({ onSubmit, disabled, excludedCountries = [
       if (selected) {
         handleSelect(selected);
       } else if (typed.trim()) {
-        setSuggestions([]);
-        onSubmit(typed.trim());
+        const exactMatch = countryLookup.get(typed.trim().toLowerCase());
+        if (exactMatch) {
+          handleSelect(exactMatch);
+        } else {
+          setSuggestions([]);
+          onInvalid?.('Please choose a country from the list.');
+        }
       }
     } else if (e.key === 'Escape') {
       setSuggestions([]);

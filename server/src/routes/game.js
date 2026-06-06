@@ -11,6 +11,7 @@ const POINTS = { 1: 3, 2: 2, 3: 1 }; // attempt number → points
 const playersPath = path.join(__dirname, '../../../data/players.json');
 
 const playersByCountry = JSON.parse(fs.readFileSync(playersPath, 'utf8'));
+const countryLookup = new Map(Object.keys(playersByCountry).map(country => [country.toLowerCase(), country]));
 const allPlayers = Object.entries(playersByCountry).flatMap(([country, players]) =>
   players.map(player => ({
     id: `${country}-${player.number}`,
@@ -31,6 +32,30 @@ function samplePlayers(players, count) {
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy.slice(0, count);
+}
+
+function createGameSession(selectedPlayers) {
+  const sessionId = uuidv4();
+  const playerIds = selectedPlayers.map(player => player.id);
+  sessionStore.set(sessionId, {
+    id: sessionId,
+    player_ids: playerIds,
+    used_guesses: {},
+    guesses: null,
+    total_score: null,
+    completed: false,
+    created_at: new Date().toISOString(),
+  });
+
+  return {
+    sessionId,
+    players: selectedPlayers.map(({ id, name, photo_url, position }) => ({
+      id,
+      name,
+      photo_url,
+      position,
+    })),
+  };
 }
 
 function ensureLeaderboardTable() {
@@ -109,26 +134,7 @@ router.get('/game', async (req, res) => {
     }
 
     const selectedPlayers = samplePlayers(allPlayers, PLAYERS_PER_GAME);
-    const sessionId = uuidv4();
-    const playerIds = selectedPlayers.map(p => p.id);
-    sessionStore.set(sessionId, {
-      id: sessionId,
-      player_ids: playerIds,
-      used_guesses: {},
-      guesses: null,
-      total_score: null,
-      completed: false,
-      created_at: new Date().toISOString(),
-    });
-
-    const responsePlayers = selectedPlayers.map(({ id, name, photo_url, position }) => ({
-      id,
-      name,
-      photo_url,
-      position,
-    }));
-
-    res.json({ sessionId, players: responsePlayers });
+    res.json(createGameSession(selectedPlayers));
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to start game.' });
@@ -157,6 +163,11 @@ router.post('/guess', async (req, res) => {
     if (!player) return res.status(404).json({ error: 'Player not found.' });
 
     const normalizedGuess = guess.trim().toLowerCase();
+    const country = countryLookup.get(normalizedGuess);
+    if (!country) {
+      return res.status(400).json({ error: 'Please choose a country from the list.' });
+    }
+
     const usedGuesses = session.used_guesses[playerId] || [];
     if (usedGuesses.includes(normalizedGuess)) {
       return res.status(409).json({ error: 'This country was already guessed for this player.' });
@@ -235,6 +246,32 @@ router.get('/countries', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to fetch countries.' });
+  }
+});
+
+// POST /api/game/:id/rematch — start the same quiz again from a shared game
+router.post('/game/:id/rematch', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const session = sessionStore.get(id);
+    if (!session || !session.completed) {
+      return res.status(404).json({ error: 'Game not found.' });
+    }
+
+    const playerMap = Object.fromEntries(allPlayers.map(player => [player.id, player]));
+    const selectedPlayers = session.player_ids
+      .map(playerId => playerMap[playerId])
+      .filter(Boolean);
+
+    if (selectedPlayers.length !== session.player_ids.length) {
+      return res.status(500).json({ error: 'Shared game is missing player data.' });
+    }
+
+    res.json(createGameSession(selectedPlayers));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to start challenge.' });
   }
 });
 
