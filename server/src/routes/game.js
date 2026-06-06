@@ -6,7 +6,7 @@ const pool = require('../db/pool');
 
 const router = express.Router();
 
-const PLAYERS_PER_GAME = 10;
+const PLAYERS_PER_GAME = 7;
 const POINTS = { 1: 3, 2: 2, 3: 1 }; // attempt number → points
 const playersPath = path.join(__dirname, '../../../data/players.json');
 
@@ -80,7 +80,7 @@ function ensureLeaderboardTable() {
       CREATE TABLE IF NOT EXISTS leaderboard_entries (
         id BIGSERIAL PRIMARY KEY,
         name VARCHAR(24) NOT NULL CHECK (char_length(name) BETWEEN 1 AND 24),
-        score INTEGER NOT NULL CHECK (score BETWEEN 0 AND 30),
+        score INTEGER NOT NULL CHECK (score BETWEEN 0 AND 21),
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `);
@@ -142,7 +142,7 @@ async function upsertBestLeaderboardScore(name, score) {
   }
 }
 
-// GET /api/game — start a new game, returns 10 random players (no country)
+// GET /api/game — start a new game, returns 7 random players (no country)
 router.get('/game', async (req, res) => {
   try {
     if (allPlayers.length < PLAYERS_PER_GAME) {

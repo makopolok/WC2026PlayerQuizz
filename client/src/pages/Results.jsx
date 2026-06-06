@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const MAX_SCORE = 30; // 10 players × 3 pts
+const MAX_SCORE = 21; // 7 players × 3 pts
 
 export default function Results() {
   const { state } = useLocation();
@@ -58,7 +58,7 @@ export default function Results() {
     }
   }
 
-  const emoji = totalScore >= 25 ? '🏆' : totalScore >= 15 ? '⭐' : '⚽';
+  const emoji = totalScore >= 17 ? '🏆' : totalScore >= 10 ? '⭐' : '⚽';
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 py-10">

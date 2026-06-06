@@ -54,7 +54,7 @@ export default function Home() {
 
         <h1 className="text-5xl font-bold text-yellow-400">WC2026 Players Names Quizz</h1>
         <p className="text-gray-400 text-lg text-center max-w-md">
-          Can you guess the nationality of 10 World Cup 2026 players?
+          Can you guess the nationality of 7 World Cup 2026 players?
         </p>
         <div className="text-sm text-gray-500 flex gap-6">
           <span>🥇 1st try = 3 pts</span>

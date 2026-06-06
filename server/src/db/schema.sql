@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS players (
 -- Game sessions table
 CREATE TABLE IF NOT EXISTS game_sessions (
   id UUID PRIMARY KEY,
-  player_ids INTEGER[] NOT NULL,         -- 10 player IDs in order
+  player_ids INTEGER[] NOT NULL,         -- 7 player IDs in order
   guesses JSONB NOT NULL DEFAULT '[]',   -- [{player_id, attempts: [{guess, correct}], points}]
   total_score INTEGER DEFAULT 0,
   completed BOOLEAN DEFAULT FALSE,

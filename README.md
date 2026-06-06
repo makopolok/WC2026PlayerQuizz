@@ -1,6 +1,6 @@
 # WC2026 Players Names Quizz
 
-Guess the nationality of 10 World Cup 2026 players. 3 tries per player — faster guesses earn more points. Share your result with friends!
+Guess the nationality of 7 World Cup 2026 players. 3 tries per player — faster guesses earn more points. Share your result with friends!
 
 ## Stack
 
