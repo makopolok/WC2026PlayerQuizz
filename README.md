@@ -11,7 +11,7 @@ Guess the nationality of 7 World Cup 2026 players. 3 tries per player — faster
 
 ## Versions
 
-- **Beta**: 2.0
+- **Beta**: 2.1
 
 - **Live**: https://wc2026quiz.com
 

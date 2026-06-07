@@ -144,7 +144,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="font-retro text-xs" style={{ color: '#30363d' }}>BETA 1.3</p>
+      <p className="font-retro text-xs" style={{ color: '#30363d' }}>BETA 2.1</p>
     </div>
   );
 }
