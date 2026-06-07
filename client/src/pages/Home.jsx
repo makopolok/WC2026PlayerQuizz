@@ -111,7 +111,7 @@ export default function Home() {
 
         <div className="rounded-xl border border-gray-800 p-5 flex flex-col gap-4" style={{ background: '#0d1117' }}>
           <h2 className="font-retro text-sm tracking-widest" style={{ color: '#39d353' }}>👕 UNIFORMS QUIZ</h2>
-          <p className="text-sm text-gray-400">Guess the country from 5 random national team kits. No hints.</p>
+          <p className="text-sm text-gray-400">Guess 5 national teams by their uniforms.</p>
           {uniformError && <p className="text-red-400 text-sm">❌ {uniformError}</p>}
           <button
             onClick={startUniformGame}
