@@ -11,6 +11,7 @@ export default function Home() {
   const [uniformLeaders, setUniformLeaders] = useState([]);
   const [playerLeaderboardError, setPlayerLeaderboardError] = useState(null);
   const [uniformLeaderboardError, setUniformLeaderboardError] = useState(null);
+  const [shared, setShared] = useState(false);
 
   useEffect(() => {
     fetch('/api/leaderboard?limit=5')
@@ -55,6 +56,28 @@ export default function Home() {
     } catch (err) {
       setUniformError(err.message);
       setUniformLoading(false);
+    }
+  }
+
+  async function shareHome() {
+    const shareUrl = window.location.origin;
+    try {
+      if (navigator.share) {
+        await navigator.share({ url: shareUrl });
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+      } else {
+        throw new Error('No share support');
+      }
+      setShared(true);
+      setTimeout(() => setShared(false), 1800);
+    } catch (err) {
+      if (err?.name === 'AbortError') return;
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        setShared(true);
+        setTimeout(() => setShared(false), 1800);
+      }
     }
   }
 
@@ -143,6 +166,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <button
+        type="button"
+        onClick={shareHome}
+        className="text-xs underline transition-opacity"
+        style={{ color: '#6b7280', opacity: 0.9 }}
+      >
+        {shared ? '✓ Shared' : 'Share wc2026quiz.com'}
+      </button>
 
       <p className="font-retro text-xs" style={{ color: '#30363d' }}>BETA 2.1</p>
     </div>
