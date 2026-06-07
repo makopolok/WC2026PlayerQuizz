@@ -15,7 +15,11 @@ app.use(express.json());
 // API routes
 app.use('/api', gameRoutes);
 app.use('/api', uniformRoutes);
-app.use('/uniforms', express.static(path.join(__dirname, '../../data/48_uniforms')));
+const fs = require('fs');
+const webpDir = path.join(__dirname, '../../data/48_uniforms_webp');
+const pngDir = path.join(__dirname, '../../data/48_uniforms');
+const uniformsStaticDir = fs.existsSync(webpDir) ? webpDir : pngDir;
+app.use('/uniforms', express.static(uniformsStaticDir));
 
 // Serve React build in production
 if (process.env.NODE_ENV === 'production') {

@@ -127,7 +127,7 @@ export default function UniformPlay() {
 
       <div key={currentUniform.id} className="bg-gray-900 rounded-2xl p-6 w-full max-w-md flex flex-col items-center gap-4 shadow-xl">
         <img
-          src={currentUniform.imageUrl}
+          src={currentUniform.imageUrl.replace(/\.png$/i, '.webp')}
           alt="National team uniform"
           className="w-full max-w-xs rounded-xl border border-gray-700"
         />

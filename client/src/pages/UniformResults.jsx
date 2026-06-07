@@ -85,7 +85,7 @@ export default function UniformResults() {
           return (
             <div key={uniform.id} className="bg-gray-900 rounded-xl px-4 py-3 flex justify-between items-center">
               <div className="min-w-0 pr-3 flex items-center gap-3">
-                <img src={uniform.imageUrl} alt={uniform.country} className="w-10 h-10 rounded object-cover border border-gray-700" />
+                <img src={uniform.imageUrl.replace(/\.png$/i, '.webp')} alt={uniform.country} className="w-10 h-10 rounded object-cover border border-gray-700" />
                 <p className="font-semibold truncate">{uniform.country}</p>
               </div>
               <span className={`font-bold ${g?.points > 0 ? 'text-green-400' : 'text-red-400'}`}>
