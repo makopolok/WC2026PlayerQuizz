@@ -131,6 +131,7 @@ export default function CountryInput({
       <input
         ref={inputRef}
         type="text"
+        inputMode="text"
         value={typed}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
@@ -138,6 +139,7 @@ export default function CountryInput({
         placeholder="Type a country…"
         className="w-full bg-gray-800 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 disabled:opacity-40"
         autoComplete="off"
+        spellCheck="false"
       />
       {suggestions.length > 0 && (
         <ul
