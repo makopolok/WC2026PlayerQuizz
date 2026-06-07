@@ -29,8 +29,25 @@ const allPlayers = Object.entries(playersByCountry).flatMap(([country, players])
   }))
 );
 
-const sessionStore = new Map();
+let sessionTableReady = null;
 let leaderboardTableReady = null;
+
+function ensureSessionTable() {
+  if (!sessionTableReady) {
+    sessionTableReady = pool.query(`
+      CREATE TABLE IF NOT EXISTS game_sessions (
+        id UUID PRIMARY KEY,
+        player_ids TEXT[] NOT NULL,
+        used_guesses JSONB NOT NULL DEFAULT '{}',
+        guesses JSONB,
+        total_score INTEGER,
+        completed BOOLEAN NOT NULL DEFAULT FALSE,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+  }
+  return sessionTableReady;
+}
 
 function samplePlayers(players, count) {
   const copy = [...players];
@@ -41,19 +58,14 @@ function samplePlayers(players, count) {
   return copy.slice(0, count);
 }
 
-function createGameSession(selectedPlayers) {
+async function createGameSession(selectedPlayers) {
   const sessionId = uuidv4();
   const playerIds = selectedPlayers.map(player => player.id);
-  sessionStore.set(sessionId, {
-    id: sessionId,
-    player_ids: playerIds,
-    used_guesses: {},
-    guesses: null,
-    total_score: null,
-    completed: false,
-    created_at: new Date().toISOString(),
-  });
-
+  await ensureSessionTable();
+  await pool.query(
+    `INSERT INTO game_sessions (id, player_ids) VALUES ($1, $2)`,
+    [sessionId, playerIds]
+  );
   return {
     sessionId,
     players: selectedPlayers.map(({ id, name, photo_url, position }) => ({
@@ -79,7 +91,6 @@ function getSessionPlayersWithDetails(session) {
       photo_url,
     }));
 }
-
 function ensureLeaderboardTable() {
   if (!leaderboardTableReady) {
     leaderboardTableReady = pool.query(`
@@ -156,7 +167,7 @@ router.get('/game', async (req, res) => {
     }
 
     const selectedPlayers = samplePlayers(allPlayers, PLAYERS_PER_GAME);
-    res.json(createGameSession(selectedPlayers));
+    res.json(await createGameSession(selectedPlayers));
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to start game.' });
@@ -175,7 +186,9 @@ router.post('/guess', async (req, res) => {
   }
 
   try {
-    const session = sessionStore.get(sessionId);
+    await ensureSessionTable();
+    const { rows } = await pool.query(`SELECT * FROM game_sessions WHERE id = $1`, [sessionId]);
+    const session = rows[0];
     if (!session) return res.status(404).json({ error: 'Session not found.' });
     if (!session.player_ids.includes(playerId)) {
       return res.status(400).json({ error: 'Player is not part of this session.' });
@@ -190,17 +203,15 @@ router.post('/guess', async (req, res) => {
       return res.status(400).json({ error: 'Please choose a country from the list.' });
     }
 
-    const usedGuesses = session.used_guesses[playerId] || [];
+    const usedGuesses = (session.used_guesses[playerId] || []);
     if (usedGuesses.includes(normalizedGuess)) {
       return res.status(409).json({ error: 'This country was already guessed for this player.' });
     }
 
     const correct = player.country.toLowerCase() === normalizedGuess;
     const points = correct ? POINTS[attemptNumber] : 0;
-    // Reveal the country on correct guess or on the final (3rd) wrong attempt
     const revealCountry = correct || attemptNumber === 3;
 
-    // On 2nd wrong attempt, pick a random trivia question as a hint for attempt 3
     let hint = null;
     if (!correct && attemptNumber === 2) {
       const questions = triviaByCountry.get(player.country.toLowerCase()) || [];
@@ -210,7 +221,8 @@ router.post('/guess', async (req, res) => {
     }
 
     if (!correct) {
-      session.used_guesses[playerId] = [...usedGuesses, normalizedGuess];
+      const updatedUsed = { ...session.used_guesses, [playerId]: [...usedGuesses, normalizedGuess] };
+      await pool.query(`UPDATE game_sessions SET used_guesses = $1 WHERE id = $2`, [JSON.stringify(updatedUsed), sessionId]);
     }
 
     res.json({ correct, points, country: revealCountry ? player.country : null, hint });
@@ -230,12 +242,15 @@ router.post('/game/complete', async (req, res) => {
   }
 
   try {
-    const session = sessionStore.get(sessionId);
+    await ensureSessionTable();
+    const { rows } = await pool.query(`SELECT * FROM game_sessions WHERE id = $1`, [sessionId]);
+    const session = rows[0];
     if (!session) return res.status(404).json({ error: 'Session not found.' });
 
-    session.guesses = guesses;
-    session.total_score = totalScore;
-    session.completed = true;
+    await pool.query(
+      `UPDATE game_sessions SET guesses = $1, total_score = $2, completed = TRUE WHERE id = $3`,
+      [JSON.stringify(guesses), totalScore, sessionId]
+    );
     const players = getSessionPlayersWithDetails(session);
     res.json({ shareId: sessionId, players });
   } catch (err) {
@@ -248,8 +263,10 @@ router.post('/game/complete', async (req, res) => {
 router.get('/game/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const session = sessionStore.get(id);
-    if (!session || !session.completed) {
+    await ensureSessionTable();
+    const { rows } = await pool.query(`SELECT * FROM game_sessions WHERE id = $1 AND completed = TRUE`, [id]);
+    const session = rows[0];
+    if (!session) {
       return res.status(404).json({ error: 'Game not found.' });
     }
 
@@ -281,8 +298,10 @@ router.post('/game/:id/rematch', async (req, res) => {
   const { id } = req.params;
 
   try {
-    const session = sessionStore.get(id);
-    if (!session || !session.completed) {
+    await ensureSessionTable();
+    const { rows } = await pool.query(`SELECT * FROM game_sessions WHERE id = $1 AND completed = TRUE`, [id]);
+    const session = rows[0];
+    if (!session) {
       return res.status(404).json({ error: 'Game not found.' });
     }
 
@@ -292,7 +311,7 @@ router.post('/game/:id/rematch', async (req, res) => {
       return res.status(500).json({ error: 'Shared game is missing player data.' });
     }
 
-    res.json(createGameSession(selectedPlayers));
+    res.json(await createGameSession(selectedPlayers));
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to start challenge.' });
