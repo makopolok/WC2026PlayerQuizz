@@ -17,6 +17,7 @@ export default function Results() {
   const [submitError, setSubmitError] = useState(null);
   const [savedScore, setSavedScore] = useState(false);
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
+  const [leaders, setLeaders] = useState(null);
 
   const TAUNTS = [
     `I scored ${totalScore}/${MAX_SCORE} on this WC2026 quiz… and I'm not even sorry 😤 Think you can beat that?`,
@@ -64,6 +65,9 @@ export default function Results() {
           `💡 Your best score is ${data.bestScore} pts. Try again to beat your own best score.`
         );
       }
+      // Fetch and show leaderboard either way
+      const lb = await fetch('/api/leaderboard?limit=10');
+      if (lb.ok) setLeaders(await lb.json());
     } catch (err) {
       setSubmitError(err.message);
     } finally {
@@ -128,9 +132,23 @@ export default function Results() {
             {submitting ? 'Saving…' : 'Save score'}
           </button>
         )}
-      </div>
 
-      {/* Share */}
+        {leaders && (
+          <div className="mt-2 flex flex-col gap-2">
+            <p className="text-yellow-400 font-semibold text-sm">🏅 Leaderboard</p>
+            {leaders.map((entry) => (
+              <div
+                key={entry.id}
+                className={`flex justify-between items-center rounded-lg px-3 py-2 text-sm ${entry.name.toLowerCase() === playerName.trim().toLowerCase() ? 'bg-yellow-400/20 text-yellow-300 font-bold' : 'bg-gray-800 text-gray-300'}`}
+              >
+                <span>#{entry.rank} {entry.name}</span>
+                <span>{entry.score} pts</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+      </div>
       <div className="flex flex-col items-center gap-3 mt-4">
         <p className="text-gray-400 text-sm">Challenge your friends with the same quiz!</p>
         <button
