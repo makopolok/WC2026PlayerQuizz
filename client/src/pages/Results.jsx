@@ -17,9 +17,23 @@ export default function Results() {
   const [savedScore, setSavedScore] = useState(false);
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
 
-  function copyLink() {
-    navigator.clipboard.writeText(shareUrl);
-    alert('Link copied!');
+  const TAUNTS = [
+    `I scored ${totalScore}/${MAX_SCORE} on this WC2026 quiz… and I'm not even sorry 😤 Think you can beat that?`,
+    `${totalScore}/${MAX_SCORE} points. I basically know every World Cup squad by heart at this point 🧠⚽ Your turn!`,
+    `Just scored ${totalScore}/${MAX_SCORE} on the WC2026 player quiz. Easy. 😏 Let's see you try.`,
+    `${totalScore} out of ${MAX_SCORE}. Could be better, could be worse. Mostly better than you probably 😂 Prove me wrong!`,
+    `Me: ${totalScore}/${MAX_SCORE}. You: ??? 👀 Same quiz, same players. No excuses.`,
+  ];
+  const taunt = TAUNTS[totalScore % TAUNTS.length];
+  const shareText = `${taunt}\n\n${shareUrl}`;
+
+  function share() {
+    if (navigator.share) {
+      navigator.share({ text: shareText }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareText);
+      alert('Copied to clipboard!');
+    }
   }
 
   async function submitLeaderboardScore() {
@@ -121,10 +135,10 @@ export default function Results() {
       <div className="flex flex-col items-center gap-3 mt-4">
         <p className="text-gray-400 text-sm">Challenge your friends with the same quiz!</p>
         <button
-          onClick={copyLink}
+          onClick={share}
           className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
         >
-          📋 Copy Challenge Link
+          📲 Challenge a Friend
         </button>
         <button
           onClick={() => navigate('/')}
