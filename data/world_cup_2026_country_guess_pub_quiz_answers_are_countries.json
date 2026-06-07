@@ -1,0 +1,5457 @@
+{
+  "title": "World Cup 2026 Country-Guess Pub Quiz — answer is always the country",
+  "created_for": "casual pub crowd; football plus pop culture, anthroponymy, geography, history, food, flags, landmarks and names",
+  "created_date": "2026-06-06",
+  "format_note": "Each question is a clue. The answer field is the World Cup 2026 country name. The country name and common gentilic forms are intentionally omitted from that country’s own question text.",
+  "validation": {
+    "countries_count": 48,
+    "questions_per_country": 10,
+    "total_questions": 480,
+    "self_name_or_gentilic_in_question_violations": 0,
+    "violations": []
+  },
+  "sources_note": "Team list and group labels based on the 2026 World Cup 48-team field as verified June 2026 from FIFA/FOX/Al Jazeera summaries. Trivia clues use stable cultural, geographic, historical, and football facts.",
+  "countries": [
+    {
+      "group": "A",
+      "country": "Mexico",
+      "accepted_answers": [
+        "Mexico"
+      ],
+      "questions": [
+        {
+          "id": "mexico_001",
+          "question": "Which 2026 World Cup country is home to Chichén Itzá, the ancient city famous for the stepped pyramid known as El Castillo?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & archaeology"
+        },
+        {
+          "id": "mexico_002",
+          "question": "Which 2026 World Cup country was home to Casa Azul, the cobalt-blue house that became a museum dedicated to one of the 20th century’s most recognizable painters?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "hard",
+          "category": "Art & pop culture"
+        },
+        {
+          "id": "mexico_003",
+          "question": "Which 2026 World Cup country’s national football team is nicknamed “El Tri” because of the three colors on its flag?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "mexico_004",
+          "question": "Which 2026 World Cup country has a capital city built partly on the ruins of Tenochtitlan?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & geography"
+        },
+        {
+          "id": "mexico_005",
+          "question": "Which 2026 World Cup country is strongly associated with Día de los Muertos, a holiday involving marigolds, sugar skulls, and family altars?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "mexico_006",
+          "question": "Which 2026 World Cup country introduced the world to foods based on corn tortillas, including tacos al pastor, enchiladas, and quesadillas?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium",
+          "category": "Food"
+        },
+        {
+          "id": "mexico_007",
+          "question": "Which 2026 World Cup country’s flag shows an eagle standing on a cactus while holding a snake?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "mexico_008",
+          "question": "Which 2026 World Cup country hosted the men’s tournament in both 1970 and 1986 before becoming one of the 2026 co-hosts?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "mexico_009",
+          "question": "Which 2026 World Cup country is the birthplace of goalkeeper Jorge Campos, famous in the 1990s for acrobatic saves and bright self-designed kits?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "mexico_010",
+          "question": "In which 2026 World Cup country did the silver-masked wrestler El Santo become a folk hero, appearing not only in the ring but also in comic books and dozens of films?",
+          "answer": "Mexico",
+          "accepted_answers": [
+            "Mexico"
+          ],
+          "difficulty": "hard",
+          "category": "Pop culture"
+        }
+      ]
+    },
+    {
+      "group": "A",
+      "country": "South Korea",
+      "accepted_answers": [
+        "South Korea",
+        "Korea Republic",
+        "Republic of Korea"
+      ],
+      "questions": [
+        {
+          "id": "south_korea_001",
+          "question": "Which 2026 World Cup country uses the Hangul writing system, created in the 15th century under King Sejong?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & history"
+        },
+        {
+          "id": "south_korea_002",
+          "question": "Which 2026 World Cup country gave the world the Oscar-winning film “Parasite” and the Netflix series “Squid Game”?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Film & TV"
+        },
+        {
+          "id": "south_korea_003",
+          "question": "Which 2026 World Cup country’s flag includes a red-and-blue taegeuk symbol and four black trigrams?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "south_korea_004",
+          "question": "Which 2026 World Cup country produced the boy band BTS and helped turn K-pop into a global industry?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium",
+          "category": "Pop culture"
+        },
+        {
+          "id": "south_korea_005",
+          "question": "Which 2026 World Cup country co-hosted the 2002 World Cup and reached the semi-finals that year?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "south_korea_006",
+          "question": "Which 2026 World Cup country is home to Jeju Island, a volcanic island known for lava tubes and haenyeo women divers?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "south_korea_007",
+          "question": "Which 2026 World Cup country’s capital is crossed by the Han River and has districts such as Gangnam and Hongdae?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities"
+        },
+        {
+          "id": "south_korea_008",
+          "question": "Which 2026 World Cup country has a national side often nicknamed the Taegeuk Warriors?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "south_korea_009",
+          "question": "Which 2026 World Cup country is associated with kimchi, gochujang, bibimbap, and barbecue cooked at the table?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "south_korea_010",
+          "question": "Which 2026 World Cup country is the birthplace of Son Heung-min, the Tottenham forward known for his two-footed finishing?",
+          "answer": "South Korea",
+          "accepted_answers": [
+            "South Korea",
+            "Korea Republic",
+            "Republic of Korea"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        }
+      ]
+    },
+    {
+      "group": "A",
+      "country": "South Africa",
+      "accepted_answers": [
+        "South Africa"
+      ],
+      "questions": [
+        {
+          "id": "south_africa_001",
+          "question": "Which 2026 World Cup country has three capital cities and one of them was Bloemfontein?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & politics"
+        },
+        {
+          "id": "south_africa_002",
+          "question": "Which 2026 World Cup country hosted the first men’s World Cup ever held on its continent in 2010?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "south_africa_003",
+          "question": "Which 2026 World Cup country is associated with the vuvuzela sound that became famous during the 2010 tournament?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "south_africa_004",
+          "question": "Which 2026 World Cup country was home to Nelson Mandela and the prison island where he spent many years?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "south_africa_005",
+          "question": "Which 2026 World Cup country has 12 official languages after adding sign language to its constitution?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & society"
+        },
+        {
+          "id": "south_africa_006",
+          "question": "Which 2026 World Cup country’s nickname “Bafana Bafana” literally means “the boys, the boys”?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "south_africa_007",
+          "question": "Which 2026 World Cup country contains Kruger National Park and a coastline meeting both the Atlantic and Indian oceans?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Nature & geography"
+        },
+        {
+          "id": "south_africa_008",
+          "question": "Which 2026 World Cup country’s flag was adopted in 1994?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & history"
+        },
+        {
+          "id": "south_africa_009",
+          "question": "Which 2026 World Cup country is strongly associated with braai culture, biltong, and bobotie?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "south_africa_010",
+          "question": "Which 2026 World Cup country has a major city overlooked by Table Mountain?",
+          "answer": "South Africa",
+          "accepted_answers": [
+            "South Africa"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        }
+      ]
+    },
+    {
+      "group": "A",
+      "country": "Czechia",
+      "accepted_answers": [
+        "Czechia",
+        "Czech Republic"
+      ],
+      "questions": [
+        {
+          "id": "czechia_001",
+          "question": "Which 2026 World Cup country has a capital famous for Charles Bridge, a medieval astronomical clock, and a hilltop castle complex?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & landmarks"
+        },
+        {
+          "id": "czechia_002",
+          "question": "Which 2026 World Cup country gave the world the word “robot” through a 1920 play by Karel Čapek?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & literature"
+        },
+        {
+          "id": "czechia_003",
+          "question": "Which 2026 World Cup country is historically linked to Bohemia and Moravia?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & geography"
+        },
+        {
+          "id": "czechia_004",
+          "question": "Which 2026 World Cup country’s beer city Plzeň gave its name to Pilsner-style lager?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & drink"
+        },
+        {
+          "id": "czechia_005",
+          "question": "Which 2026 World Cup country reached the Euro 1996 final with stars such as Pavel Nedvěd and Karel Poborský?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "czechia_006",
+          "question": "Which 2026 World Cup country’s national team is often connected with the “Panenka” penalty, named after a player born in Prague?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "czechia_007",
+          "question": "Which 2026 World Cup country has a red, white, and blue flag with a blue triangle at the hoist?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "czechia_008",
+          "question": "Which 2026 World Cup country was peacefully formed after the 1993 split known as the Velvet Divorce?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern history"
+        },
+        {
+          "id": "czechia_009",
+          "question": "Which 2026 World Cup country is known for spa towns such as Karlovy Vary and a major film festival held there?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "czechia_010",
+          "question": "Which 2026 World Cup country is home to writer Franz Kafka’s birthplace and many sites connected to him?",
+          "answer": "Czechia",
+          "accepted_answers": [
+            "Czechia",
+            "Czech Republic"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Literature"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "country": "Canada",
+      "accepted_answers": [
+        "Canada"
+      ],
+      "questions": [
+        {
+          "id": "canada_001",
+          "question": "Which 2026 World Cup country has a maple leaf at the center of its flag?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "canada_002",
+          "question": "Which 2026 World Cup country has two official languages and a province where French dominates public life?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & society"
+        },
+        {
+          "id": "canada_003",
+          "question": "Which 2026 World Cup country is home to the CN Tower, Banff National Park, and the city of Vancouver?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & landmarks"
+        },
+        {
+          "id": "canada_004",
+          "question": "Which 2026 World Cup country co-hosts the 2026 tournament and will play a group match in Toronto?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup 2026"
+        },
+        {
+          "id": "canada_005",
+          "question": "Which 2026 World Cup country is the birthplace of Alphonso Davies, who later became a Bayern Munich star?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "canada_006",
+          "question": "Which 2026 World Cup country’s national men’s team returned to the World Cup in 2022 after a 36-year absence?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "canada_007",
+          "question": "Which 2026 World Cup country is associated with poutine, butter tarts, and a deep cultural love of ice hockey?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & sport culture"
+        },
+        {
+          "id": "canada_008",
+          "question": "Which 2026 World Cup country stretches from the Atlantic to the Pacific and also borders the Arctic Ocean?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "canada_009",
+          "question": "Which 2026 World Cup country gave the world musicians such as Drake, Celine Dion, and The Weeknd?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "canada_010",
+          "question": "Which 2026 World Cup country has a province whose name comes from an Algonquin word often translated as “where the river narrows”?",
+          "answer": "Canada",
+          "accepted_answers": [
+            "Canada"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy & geography"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "country": "Switzerland",
+      "accepted_answers": [
+        "Switzerland"
+      ],
+      "questions": [
+        {
+          "id": "switzerland_001",
+          "question": "Which 2026 World Cup country has a square red flag with a white cross?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "switzerland_002",
+          "question": "Which 2026 World Cup country has four national languages: German, French, Italian, and Romansh?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "switzerland_003",
+          "question": "Which 2026 World Cup country is home to FIFA’s headquarters in Zürich?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football administration"
+        },
+        {
+          "id": "switzerland_004",
+          "question": "Which 2026 World Cup country is associated with fondue, raclette, and chocolate brands famous worldwide?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "switzerland_005",
+          "question": "Which 2026 World Cup country has cities such as Geneva, Basel, Bern, and Lausanne, but no official capital in the usual sense?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & politics"
+        },
+        {
+          "id": "switzerland_006",
+          "question": "Which 2026 World Cup country’s railway scenery includes the Matterhorn area and the Glacier Express?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & travel"
+        },
+        {
+          "id": "switzerland_007",
+          "question": "Which 2026 World Cup country gave tennis the champion Roger Federer?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Sport culture"
+        },
+        {
+          "id": "switzerland_008",
+          "question": "Which 2026 World Cup country’s national team has recently featured Granit Xhaka and Xherdan Shaqiri?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "switzerland_009",
+          "question": "Which 2026 World Cup country is known for neutrality, direct democracy, and referendums?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Politics & history"
+        },
+        {
+          "id": "switzerland_010",
+          "question": "Which 2026 World Cup country includes the canton of Ticino, where Italian is widely spoken?",
+          "answer": "Switzerland",
+          "accepted_answers": [
+            "Switzerland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & language"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "country": "Qatar",
+      "accepted_answers": [
+        "Qatar"
+      ],
+      "questions": [
+        {
+          "id": "qatar_001",
+          "question": "Which 2026 World Cup country hosted the 2022 tournament and staged the final at Lusail Stadium?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "qatar_002",
+          "question": "Which 2026 World Cup country’s capital is Doha?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium",
+          "category": "Capital cities"
+        },
+        {
+          "id": "qatar_003",
+          "question": "Which 2026 World Cup country’s flag is maroon and white with a serrated vertical division?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "qatar_004",
+          "question": "Which 2026 World Cup country won the AFC Asian Cup in both 2019 and 2023?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "qatar_005",
+          "question": "Which 2026 World Cup country is a small Gulf peninsula connected by land only to Saudi Arabia?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "qatar_006",
+          "question": "Which 2026 World Cup country is home to the Museum of Islamic Art designed by I. M. Pei?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Architecture & culture"
+        },
+        {
+          "id": "qatar_007",
+          "question": "Which 2026 World Cup country’s airline and sports-investment projects made its name familiar far beyond the Gulf?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern culture"
+        },
+        {
+          "id": "qatar_008",
+          "question": "Which 2026 World Cup country qualified for the tournament through qualifying for the first time after previously appearing as host?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup qualification"
+        },
+        {
+          "id": "qatar_009",
+          "question": "Which 2026 World Cup country has a national team nicknamed Al-Annabi, meaning “The Maroons”?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "qatar_010",
+          "question": "Which 2026 World Cup country has a famous traditional market called Souq Waqif?",
+          "answer": "Qatar",
+          "accepted_answers": [
+            "Qatar"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "country": "Bosnia & Herzegovina",
+      "accepted_answers": [
+        "Bosnia & Herzegovina",
+        "Bosnia and Herzegovina"
+      ],
+      "questions": [
+        {
+          "id": "bosnia_herzegovina_001",
+          "question": "Which 2026 World Cup country’s capital hosted the 1984 Winter Olympics?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & sport"
+        },
+        {
+          "id": "bosnia_herzegovina_002",
+          "question": "Which 2026 World Cup country contains the historic bridge at Mostar, rebuilt after the 1990s war?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks & history"
+        },
+        {
+          "id": "bosnia_herzegovina_003",
+          "question": "Which 2026 World Cup country’s national football team is nicknamed the Dragons?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "bosnia_herzegovina_004",
+          "question": "Which 2026 World Cup country is strongly associated with ćevapi, burek, and thick coffee served from a džezva?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "bosnia_herzegovina_005",
+          "question": "Which 2026 World Cup country made its World Cup debut in 2014 with Edin Džeko as its star striker?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "bosnia_herzegovina_006",
+          "question": "Which 2026 World Cup country’s capital has a famous old quarter called Baščaršija?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities"
+        },
+        {
+          "id": "bosnia_herzegovina_007",
+          "question": "Which 2026 World Cup country was the scene of the 1914 assassination often linked to the start of World War I?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World history"
+        },
+        {
+          "id": "bosnia_herzegovina_008",
+          "question": "Which 2026 World Cup country has a blue-and-yellow flag with a diagonal row of white stars?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "bosnia_herzegovina_009",
+          "question": "Which 2026 World Cup country sits in the Balkans and has only a short coastline near Neum?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "bosnia_herzegovina_010",
+          "question": "Which 2026 World Cup country uses a name combining two historical regions, one mountainous and one southern?",
+          "answer": "Bosnia & Herzegovina",
+          "accepted_answers": [
+            "Bosnia & Herzegovina",
+            "Bosnia and Herzegovina"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy & geography"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "country": "Brazil",
+      "accepted_answers": [
+        "Brazil"
+      ],
+      "questions": [
+        {
+          "id": "brazil_001",
+          "question": "Which 2026 World Cup country has won the men’s tournament five times, more than any other?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium",
+          "category": "World Cup history"
+        },
+        {
+          "id": "brazil_002",
+          "question": "Which 2026 World Cup country’s flag carries the motto “Order and Progress” across a starry globe?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "brazil_003",
+          "question": "Which 2026 World Cup country is the birthplace of Pelé, Garrincha, Ronaldo, Ronaldinho, and Neymar?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium",
+          "category": "Football icons"
+        },
+        {
+          "id": "brazil_004",
+          "question": "Which 2026 World Cup country’s largest city is São Paulo, while its planned capital was inaugurated in 1960?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & cities"
+        },
+        {
+          "id": "brazil_005",
+          "question": "Which 2026 World Cup country is home to much of the Amazon rainforest and the city of Manaus?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "brazil_006",
+          "question": "Which 2026 World Cup country is associated with samba schools, Carnival parades, and the Sambadrome?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "brazil_007",
+          "question": "Which 2026 World Cup country speaks Portuguese as its official language, unlike most of its neighbors?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "brazil_008",
+          "question": "Which 2026 World Cup country lost a famous 1950 home final-round match later nicknamed the Maracanazo?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "brazil_009",
+          "question": "Which 2026 World Cup country’s national side is often called the Seleção?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "brazil_010",
+          "question": "Which 2026 World Cup country gave its name to a wax used for shiny car polish, harvested from a palm tree?",
+          "answer": "Brazil",
+          "accepted_answers": [
+            "Brazil"
+          ],
+          "difficulty": "hard",
+          "category": "Words & products"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "country": "Morocco",
+      "accepted_answers": [
+        "Morocco"
+      ],
+      "questions": [
+        {
+          "id": "morocco_001",
+          "question": "Which 2026 World Cup country became the first African and Arab team to reach a men’s World Cup semi-final?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "morocco_002",
+          "question": "Which 2026 World Cup country has cities such as Marrakech, Fez, Casablanca, and Rabat?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & cities"
+        },
+        {
+          "id": "morocco_003",
+          "question": "Which 2026 World Cup country’s flag is red with a green five-pointed star in the center?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "morocco_004",
+          "question": "Which 2026 World Cup country is separated from Spain by the Strait of Gibraltar?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "morocco_005",
+          "question": "Which 2026 World Cup country is famous for tagine, couscous, preserved lemons, and mint tea?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "morocco_006",
+          "question": "Which 2026 World Cup country’s Atlas Lions beat Portugal and Spain during their 2022 knockout run?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "morocco_007",
+          "question": "Which 2026 World Cup country is home to the blue-painted mountain town of Chefchaouen?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Travel & landmarks"
+        },
+        {
+          "id": "morocco_008",
+          "question": "Which 2026 World Cup country includes parts of the Atlas Mountains and the Sahara’s northwestern edge?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "morocco_009",
+          "question": "Which 2026 World Cup country is associated with Amazigh culture and has Arabic and Amazigh as official languages?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & identity"
+        },
+        {
+          "id": "morocco_010",
+          "question": "Which 2026 World Cup country will co-host the 2030 tournament along with two Iberian neighbors?",
+          "answer": "Morocco",
+          "accepted_answers": [
+            "Morocco"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup future"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "country": "Scotland",
+      "accepted_answers": [
+        "Scotland"
+      ],
+      "questions": [
+        {
+          "id": "scotland_001",
+          "question": "Which 2026 World Cup country’s fans are famously known as the Tartan Army?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "scotland_002",
+          "question": "Which 2026 World Cup country has a flag known as the Saltire?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "scotland_003",
+          "question": "Which 2026 World Cup country is home to Loch Ness, the Highlands, and the Isle of Skye?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "scotland_004",
+          "question": "Which 2026 World Cup country’s national poet is Robert Burns, celebrated with haggis and whisky each January?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Literature & food"
+        },
+        {
+          "id": "scotland_005",
+          "question": "Which 2026 World Cup country’s largest city is Glasgow, while its capital hosts a famous annual arts festival?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & culture"
+        },
+        {
+          "id": "scotland_006",
+          "question": "Which 2026 World Cup country has not appeared at a men’s World Cup since 1998 before returning for 2026?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "scotland_007",
+          "question": "Which 2026 World Cup country shares the island of Great Britain with a southern neighbor it has one of football’s oldest rivalries against?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & football"
+        },
+        {
+          "id": "scotland_008",
+          "question": "Which 2026 World Cup country is associated with bagpipes, clan tartans, and the thistle?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & symbols"
+        },
+        {
+          "id": "scotland_009",
+          "question": "Which 2026 World Cup country’s club rivalry between Celtic and Rangers is called the Old Firm?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "scotland_010",
+          "question": "Which 2026 World Cup country’s name is linked to Scoti, a Latin term originally used for Gaelic peoples?",
+          "answer": "Scotland",
+          "accepted_answers": [
+            "Scotland"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "country": "Haiti",
+      "accepted_answers": [
+        "Haiti"
+      ],
+      "questions": [
+        {
+          "id": "haiti_001",
+          "question": "Which 2026 World Cup country was the first independent Black republic after a successful slave revolt?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "haiti_002",
+          "question": "Which 2026 World Cup country shares the island of Hispaniola with the Dominican Republic?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium",
+          "category": "Geography"
+        },
+        {
+          "id": "haiti_003",
+          "question": "Which 2026 World Cup country’s capital is Port-au-Prince?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "haiti_004",
+          "question": "Which 2026 World Cup country appeared at the men’s World Cup in 1974 and returns in 2026 after a long gap?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "haiti_005",
+          "question": "Which 2026 World Cup country’s official languages are French and Kreyòl?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "haiti_006",
+          "question": "Which 2026 World Cup country has a blue-and-red flag with a palm tree and cannons on the coat of arms?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "haiti_007",
+          "question": "Which 2026 World Cup country is associated with soup joumou, a dish tied to independence celebrations?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & history"
+        },
+        {
+          "id": "haiti_008",
+          "question": "Which 2026 World Cup country is home to the mountaintop fortress Citadelle Laferrière?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        },
+        {
+          "id": "haiti_009",
+          "question": "Which 2026 World Cup country gave the world artists of the Saint-Soleil movement and a vivid tradition of vodou-inspired painting?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Art & culture"
+        },
+        {
+          "id": "haiti_010",
+          "question": "Which 2026 World Cup country’s name comes from an Indigenous Taíno word often linked to “land of high mountains”?",
+          "answer": "Haiti",
+          "accepted_answers": [
+            "Haiti"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "country": "United States",
+      "accepted_answers": [
+        "United States",
+        "USA",
+        "U.S.A.",
+        "US",
+        "U.S.",
+        "United States of America"
+      ],
+      "questions": [
+        {
+          "id": "united_states_001",
+          "question": "Which 2026 World Cup country has a flag with 50 stars and 13 stripes?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "united_states_002",
+          "question": "Which 2026 World Cup country will host the 2026 final at MetLife Stadium in the New York/New Jersey area?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup 2026"
+        },
+        {
+          "id": "united_states_003",
+          "question": "Which 2026 World Cup country is home to the Grand Canyon, Yellowstone, and the Statue of Liberty?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & landmarks"
+        },
+        {
+          "id": "united_states_004",
+          "question": "Which 2026 World Cup country’s men’s team reached the semi-finals of the first World Cup in 1930?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "united_states_005",
+          "question": "Which 2026 World Cup country produced footballers Christian Pulisic, Clint Dempsey, and Mia Hamm?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "united_states_006",
+          "question": "Which 2026 World Cup country gave the world Hollywood, jazz, hip-hop, and Broadway?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "united_states_007",
+          "question": "Which 2026 World Cup country has states named after Indigenous, Spanish, French, and British origins?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & geography"
+        },
+        {
+          "id": "united_states_008",
+          "question": "Which 2026 World Cup country has a capital district named after Christopher Columbus and a first president?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & history"
+        },
+        {
+          "id": "united_states_009",
+          "question": "Which 2026 World Cup country’s soccer league uses clubs such as LA Galaxy, Inter Miami, and Seattle Sounders?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "united_states_010",
+          "question": "Which 2026 World Cup country is home to Mount Rushmore, Route 66, and the Smithsonian museums?",
+          "answer": "United States",
+          "accepted_answers": [
+            "United States",
+            "USA",
+            "U.S.A.",
+            "US",
+            "U.S.",
+            "United States of America"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "country": "Australia",
+      "accepted_answers": [
+        "Australia"
+      ],
+      "questions": [
+        {
+          "id": "australia_001",
+          "question": "Which 2026 World Cup country’s football team is nicknamed the Socceroos?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "australia_002",
+          "question": "Which 2026 World Cup country is home to the Great Barrier Reef and Uluru?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & landmarks"
+        },
+        {
+          "id": "australia_003",
+          "question": "Which 2026 World Cup country’s flag includes the Union Jack and the Southern Cross?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "australia_004",
+          "question": "Which 2026 World Cup country is both a continent-sized nation and a member of the AFC in football?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & football"
+        },
+        {
+          "id": "australia_005",
+          "question": "Which 2026 World Cup country reached the round of 16 in both 2006 and 2022?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "australia_006",
+          "question": "Which 2026 World Cup country is associated with Vegemite, meat pies, and flat whites?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "australia_007",
+          "question": "Which 2026 World Cup country’s capital is Canberra, not Sydney or Melbourne?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "australia_008",
+          "question": "Which 2026 World Cup country has native animals such as kangaroos, koalas, wombats, and platypuses?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Nature"
+        },
+        {
+          "id": "australia_009",
+          "question": "Which 2026 World Cup country produced actors Nicole Kidman, Hugh Jackman, and Margot Robbie?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "australia_010",
+          "question": "Which 2026 World Cup country’s name comes from a Latin phrase meaning “southern land”?",
+          "answer": "Australia",
+          "accepted_answers": [
+            "Australia"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "country": "Paraguay",
+      "accepted_answers": [
+        "Paraguay"
+      ],
+      "questions": [
+        {
+          "id": "paraguay_001",
+          "question": "Which 2026 World Cup country is one of only two landlocked nations in South America?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "paraguay_002",
+          "question": "Which 2026 World Cup country has both Spanish and Guaraní as official languages?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "paraguay_003",
+          "question": "Which 2026 World Cup country’s flag is unusual because the front and back show different emblems?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "paraguay_004",
+          "question": "Which 2026 World Cup country’s capital is Asunción?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "paraguay_005",
+          "question": "Which 2026 World Cup country reached the 2010 World Cup quarter-finals after a penalty shootout win over Japan?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "paraguay_006",
+          "question": "Which 2026 World Cup country is associated with yerba mate drunk cold as tereré?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & drink"
+        },
+        {
+          "id": "paraguay_007",
+          "question": "Which 2026 World Cup country produced goalkeeper José Luis Chilavert, famous for free kicks and penalties?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "paraguay_008",
+          "question": "Which 2026 World Cup country is crossed by a major river that also gives the nation its name?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & names"
+        },
+        {
+          "id": "paraguay_009",
+          "question": "Which 2026 World Cup country’s national team is nicknamed La Albirroja?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "paraguay_010",
+          "question": "Which 2026 World Cup country fought the devastating War of the Triple Alliance in the 19th century?",
+          "answer": "Paraguay",
+          "accepted_answers": [
+            "Paraguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "country": "Türkiye",
+      "accepted_answers": [
+        "Türkiye",
+        "Turkey",
+        "Turkiye"
+      ],
+      "questions": [
+        {
+          "id": "turkiye_001",
+          "question": "Which 2026 World Cup country finished third at the 2002 tournament with Hakan Şükür scoring one of the fastest goals in tournament history?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "turkiye_002",
+          "question": "Which 2026 World Cup country’s largest city straddles Europe and Asia across the Bosphorus?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & cities"
+        },
+        {
+          "id": "turkiye_003",
+          "question": "Which 2026 World Cup country’s flag shows a white crescent and star on red?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "turkiye_004",
+          "question": "Which 2026 World Cup country is associated with baklava, döner, simit, and strong coffee served in tiny cups?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "turkiye_005",
+          "question": "Which 2026 World Cup country is home to Cappadocia’s fairy chimneys and hot-air balloon landscapes?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Travel & landmarks"
+        },
+        {
+          "id": "turkiye_006",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Crescent-Stars?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "turkiye_007",
+          "question": "Which 2026 World Cup country has a capital called Ankara, though many outsiders first think of Istanbul?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "turkiye_008",
+          "question": "Which 2026 World Cup country was the heartland of the Ottoman Empire?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "turkiye_009",
+          "question": "Which 2026 World Cup country has major clubs such as Galatasaray, Fenerbahçe, and Beşiktaş?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "turkiye_010",
+          "question": "Which 2026 World Cup country officially asked to be referred to internationally by its local-language name in 2022?",
+          "answer": "Türkiye",
+          "accepted_answers": [
+            "Türkiye",
+            "Turkey",
+            "Turkiye"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & politics"
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "country": "Germany",
+      "accepted_answers": [
+        "Germany"
+      ],
+      "questions": [
+        {
+          "id": "germany_001",
+          "question": "Which 2026 World Cup country has won the men’s tournament four times and lifted the trophy in 2014 at the Maracanã?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "germany_002",
+          "question": "Which 2026 World Cup country’s flag is black, red, and gold?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "germany_003",
+          "question": "Which 2026 World Cup country is home to Oktoberfest, the Brandenburg Gate, and the Black Forest?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & landmarks"
+        },
+        {
+          "id": "germany_004",
+          "question": "Which 2026 World Cup country produced composers Bach, Beethoven, and Wagner?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Classical music"
+        },
+        {
+          "id": "germany_005",
+          "question": "Which 2026 World Cup country’s Bundesliga features Bayern Munich and Borussia Dortmund?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "germany_006",
+          "question": "Which 2026 World Cup country reunited in 1990 after decades of division?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern history"
+        },
+        {
+          "id": "germany_007",
+          "question": "Which 2026 World Cup country’s national side is often associated with the nickname Die Mannschaft?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "germany_008",
+          "question": "Which 2026 World Cup country’s planned capital after reunification became Berlin again?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "germany_009",
+          "question": "Which 2026 World Cup country gave the world the Grimm brothers’ fairy tales and Gutenberg’s movable-type printing legacy?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Literature & history"
+        },
+        {
+          "id": "germany_010",
+          "question": "Which 2026 World Cup country’s name in its own language is Deutschland?",
+          "answer": "Germany",
+          "accepted_answers": [
+            "Germany"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & names"
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "country": "Ecuador",
+      "accepted_answers": [
+        "Ecuador"
+      ],
+      "questions": [
+        {
+          "id": "ecuador_001",
+          "question": "Which 2026 World Cup country is named after the equator?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & geography"
+        },
+        {
+          "id": "ecuador_002",
+          "question": "Which 2026 World Cup country includes the Galápagos Islands?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & nature"
+        },
+        {
+          "id": "ecuador_003",
+          "question": "Which 2026 World Cup country’s capital Quito sits high in the Andes?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "ecuador_004",
+          "question": "Which 2026 World Cup country uses the US dollar as its official currency?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Currency"
+        },
+        {
+          "id": "ecuador_005",
+          "question": "Which 2026 World Cup country’s flag is yellow, blue, and red with a condor in the coat of arms?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "ecuador_006",
+          "question": "Which 2026 World Cup country is associated with ceviche, locro de papa, and roasted cuy in the Andes?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "ecuador_007",
+          "question": "Which 2026 World Cup country reached the World Cup round of 16 in 2006?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "ecuador_008",
+          "question": "Which 2026 World Cup country produced striker Enner Valencia, its all-time top scorer?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "ecuador_009",
+          "question": "Which 2026 World Cup country is home to Cotopaxi, one of the world’s highest active volcanoes?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Nature"
+        },
+        {
+          "id": "ecuador_010",
+          "question": "Which 2026 World Cup country has a historic city named Cuenca, sharing its name with a city in Spain?",
+          "answer": "Ecuador",
+          "accepted_answers": [
+            "Ecuador"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & names"
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "country": "Côte d’Ivoire",
+      "accepted_answers": [
+        "Côte d’Ivoire",
+        "Cote d’Ivoire",
+        "Ivory Coast",
+        "Cote dIvoire"
+      ],
+      "questions": [
+        {
+          "id": "cote_divoire_001",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Elephants?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "cote_divoire_002",
+          "question": "Which 2026 World Cup country produced Didier Drogba and Yaya Touré?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "cote_divoire_003",
+          "question": "Which 2026 World Cup country is one of the world’s largest cocoa producers?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Economy & food"
+        },
+        {
+          "id": "cote_divoire_004",
+          "question": "Which 2026 World Cup country’s political capital is Yamoussoukro, while Abidjan is its largest city?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & politics"
+        },
+        {
+          "id": "cote_divoire_005",
+          "question": "Which 2026 World Cup country won the Africa Cup of Nations in 1992, 2015, and 2023?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "cote_divoire_006",
+          "question": "Which 2026 World Cup country’s flag is vertical orange, white, and green stripes?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "cote_divoire_007",
+          "question": "Which 2026 World Cup country is home to the Basilica of Our Lady of Peace, one of the largest church buildings in the world?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        },
+        {
+          "id": "cote_divoire_008",
+          "question": "Which 2026 World Cup country’s official international name is often kept in French rather than translated?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & language"
+        },
+        {
+          "id": "cote_divoire_009",
+          "question": "Which 2026 World Cup country lies on the Gulf of Guinea between Liberia and Ghana?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "cote_divoire_010",
+          "question": "Which 2026 World Cup country has musical styles such as coupé-décalé and zouglou?",
+          "answer": "Côte d’Ivoire",
+          "accepted_answers": [
+            "Côte d’Ivoire",
+            "Cote d’Ivoire",
+            "Ivory Coast",
+            "Cote dIvoire"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Music & culture"
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "country": "Curaçao",
+      "accepted_answers": [
+        "Curaçao",
+        "Curacao"
+      ],
+      "questions": [
+        {
+          "id": "curacao_001",
+          "question": "Which 2026 World Cup country will make its men’s World Cup debut as one of the smallest nations ever to qualify?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "curacao_002",
+          "question": "Which 2026 World Cup country’s capital Willemstad is known for pastel Dutch colonial buildings along the harbor?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & landmarks"
+        },
+        {
+          "id": "curacao_003",
+          "question": "Which 2026 World Cup country is in the Caribbean but remains part of the Kingdom of the Netherlands?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Politics & geography"
+        },
+        {
+          "id": "curacao_004",
+          "question": "Which 2026 World Cup country’s common local language is Papiamentu?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "curacao_005",
+          "question": "Which 2026 World Cup country’s flag is blue with a yellow stripe and two white stars?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "curacao_006",
+          "question": "Which 2026 World Cup country is associated with a blue-orange liqueur flavored with laraha peel?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & drink"
+        },
+        {
+          "id": "curacao_007",
+          "question": "Which 2026 World Cup country is part of the ABC islands together with Aruba and Bonaire?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "curacao_008",
+          "question": "Which 2026 World Cup country’s football story is linked to Dutch-Caribbean players and a dramatic qualification run?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "curacao_009",
+          "question": "Which 2026 World Cup country has beaches such as Grote Knip and Cas Abao?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Travel"
+        },
+        {
+          "id": "curacao_010",
+          "question": "Which 2026 World Cup country’s name is often said with a cedilla under the letter c?",
+          "answer": "Curaçao",
+          "accepted_answers": [
+            "Curaçao",
+            "Curacao"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & spelling"
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "country": "Netherlands",
+      "accepted_answers": [
+        "Netherlands"
+      ],
+      "questions": [
+        {
+          "id": "netherlands_001",
+          "question": "Which 2026 World Cup country’s fans are famous for wearing bright orange despite the national flag being red, white, and blue?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "netherlands_002",
+          "question": "Which 2026 World Cup country reached World Cup finals in 1974, 1978, and 2010 but lost all three?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "netherlands_003",
+          "question": "Which 2026 World Cup country is associated with windmills, tulips, canals, and bicycles?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & geography"
+        },
+        {
+          "id": "netherlands_004",
+          "question": "Which 2026 World Cup country produced Johan Cruyff and the “Total Football” idea?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "netherlands_005",
+          "question": "Which 2026 World Cup country has a capital famous for canals and a government based in The Hague?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & politics"
+        },
+        {
+          "id": "netherlands_006",
+          "question": "Which 2026 World Cup country’s name literally refers to low-lying lands?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & geography"
+        },
+        {
+          "id": "netherlands_007",
+          "question": "Which 2026 World Cup country is home to painter Vincent van Gogh and the Rijksmuseum?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Art"
+        },
+        {
+          "id": "netherlands_008",
+          "question": "Which 2026 World Cup country has reclaimed large areas of land from the sea using polders?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & engineering"
+        },
+        {
+          "id": "netherlands_009",
+          "question": "Which 2026 World Cup country is known for cheeses such as Gouda and Edam?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "netherlands_010",
+          "question": "Which 2026 World Cup country’s national team is often called Oranje?",
+          "answer": "Netherlands",
+          "accepted_answers": [
+            "Netherlands"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "country": "Japan",
+      "accepted_answers": [
+        "Japan"
+      ],
+      "questions": [
+        {
+          "id": "japan_001",
+          "question": "Which 2026 World Cup country’s flag is a red disc on a white field?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "japan_002",
+          "question": "Which 2026 World Cup country co-hosted the 2002 tournament and reached the last 16 that year?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "japan_003",
+          "question": "Which 2026 World Cup country is home to Mount Fuji, Kyoto, and Tokyo’s Shibuya Crossing?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & landmarks"
+        },
+        {
+          "id": "japan_004",
+          "question": "Which 2026 World Cup country gave the world manga, anime, sushi, and karaoke?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "japan_005",
+          "question": "Which 2026 World Cup country’s men’s team is nicknamed the Samurai Blue?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "japan_006",
+          "question": "Which 2026 World Cup country has writing systems called kanji, hiragana, and katakana?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "japan_007",
+          "question": "Which 2026 World Cup country famously beat Germany and Spain in the 2022 group stage?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "japan_008",
+          "question": "Which 2026 World Cup country is associated with Shinto shrines, cherry blossoms, and bullet trains?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "japan_009",
+          "question": "Which 2026 World Cup country’s name can be translated as “origin of the sun”?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "japan_010",
+          "question": "Which 2026 World Cup country has a top domestic league known as the J.League?",
+          "answer": "Japan",
+          "accepted_answers": [
+            "Japan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "country": "Tunisia",
+      "accepted_answers": [
+        "Tunisia"
+      ],
+      "questions": [
+        {
+          "id": "tunisia_001",
+          "question": "Which 2026 World Cup country was the first African team to win a match at the men’s World Cup, in 1978?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "tunisia_002",
+          "question": "Which 2026 World Cup country’s capital shares the name of an ancient city-state’s region near Carthage?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & cities"
+        },
+        {
+          "id": "tunisia_003",
+          "question": "Which 2026 World Cup country is home to the ruins of Carthage?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Ancient history"
+        },
+        {
+          "id": "tunisia_004",
+          "question": "Which 2026 World Cup country’s flag is red with a white circle containing a crescent and star?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "tunisia_005",
+          "question": "Which 2026 World Cup country’s team is nicknamed the Eagles of Carthage?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "tunisia_006",
+          "question": "Which 2026 World Cup country was a filming location for desert scenes in the original Star Wars films?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Film & geography"
+        },
+        {
+          "id": "tunisia_007",
+          "question": "Which 2026 World Cup country is the northernmost nation in Africa?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "tunisia_008",
+          "question": "Which 2026 World Cup country is known for harissa, brik, couscous, and olive oil?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "tunisia_009",
+          "question": "Which 2026 World Cup country’s 2011 revolution helped spark the Arab Spring?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern history"
+        },
+        {
+          "id": "tunisia_010",
+          "question": "Which 2026 World Cup country lies between Algeria and Libya on the Mediterranean coast?",
+          "answer": "Tunisia",
+          "accepted_answers": [
+            "Tunisia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "country": "Sweden",
+      "accepted_answers": [
+        "Sweden"
+      ],
+      "questions": [
+        {
+          "id": "sweden_001",
+          "question": "Which 2026 World Cup country hosted the 1958 final in which a 17-year-old Pelé scored twice?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "sweden_002",
+          "question": "Which 2026 World Cup country’s flag is blue with a yellow Nordic cross?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "sweden_003",
+          "question": "Which 2026 World Cup country gave the world ABBA, IKEA, and Spotify?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "sweden_004",
+          "question": "Which 2026 World Cup country produced striker Zlatan Ibrahimović?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "sweden_005",
+          "question": "Which 2026 World Cup country’s capital is spread over islands and is sometimes called the Venice of the North?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "sweden_006",
+          "question": "Which 2026 World Cup country has a tradition of fika, a coffee-and-cake break?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "sweden_007",
+          "question": "Which 2026 World Cup country is associated with Nobel Prizes, except the Peace Prize awarded in Oslo?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Institutions"
+        },
+        {
+          "id": "sweden_008",
+          "question": "Which 2026 World Cup country reached the 1994 World Cup semi-finals and finished third?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "sweden_009",
+          "question": "Which 2026 World Cup country’s language gave English the word “ombudsman”?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "sweden_010",
+          "question": "Which 2026 World Cup country borders Norway and Finland and is connected to Denmark by the Øresund Bridge?",
+          "answer": "Sweden",
+          "accepted_answers": [
+            "Sweden"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "country": "Belgium",
+      "accepted_answers": [
+        "Belgium"
+      ],
+      "questions": [
+        {
+          "id": "belgium_001",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Red Devils?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "belgium_002",
+          "question": "Which 2026 World Cup country finished third at the 2018 World Cup with a golden generation led by De Bruyne, Hazard, and Lukaku?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "belgium_003",
+          "question": "Which 2026 World Cup country has Dutch, French, and German as official languages?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "belgium_004",
+          "question": "Which 2026 World Cup country is famous for waffles, fries, chocolate, and hundreds of beer styles?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & drink"
+        },
+        {
+          "id": "belgium_005",
+          "question": "Which 2026 World Cup country’s capital hosts major European Union and NATO institutions?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Politics & cities"
+        },
+        {
+          "id": "belgium_006",
+          "question": "Which 2026 World Cup country has a black, yellow, and red vertical tricolor?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "belgium_007",
+          "question": "Which 2026 World Cup country gave the world Tintin and The Smurfs?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Comics & pop culture"
+        },
+        {
+          "id": "belgium_008",
+          "question": "Which 2026 World Cup country contains the regions of Flanders, Wallonia, and Brussels?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & politics"
+        },
+        {
+          "id": "belgium_009",
+          "question": "Which 2026 World Cup country’s name is linked to the ancient Belgae people mentioned by Julius Caesar?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "belgium_010",
+          "question": "Which 2026 World Cup country has club cities such as Bruges, Anderlecht, Genk, and Liège?",
+          "answer": "Belgium",
+          "accepted_answers": [
+            "Belgium"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "country": "Iran",
+      "accepted_answers": [
+        "Iran"
+      ],
+      "questions": [
+        {
+          "id": "iran_001",
+          "question": "Which 2026 World Cup country’s national team is commonly nicknamed Team Melli?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "iran_002",
+          "question": "Which 2026 World Cup country was historically known in the West as Persia?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & names"
+        },
+        {
+          "id": "iran_003",
+          "question": "Which 2026 World Cup country’s flag has green, white, and red horizontal stripes with stylized script along the borders?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "iran_004",
+          "question": "Which 2026 World Cup country is home to Persepolis, the ancient ceremonial capital of the Achaemenid Empire?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Ancient history"
+        },
+        {
+          "id": "iran_005",
+          "question": "Which 2026 World Cup country’s capital is Tehran?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "iran_006",
+          "question": "Which 2026 World Cup country is associated with Nowruz, the spring new year celebration?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture"
+        },
+        {
+          "id": "iran_007",
+          "question": "Which 2026 World Cup country produced footballers Ali Daei, Ali Karimi, and Mehdi Taremi?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "iran_008",
+          "question": "Which 2026 World Cup country is famous for saffron, pistachios, poetry, and Persian carpets?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & food"
+        },
+        {
+          "id": "iran_009",
+          "question": "Which 2026 World Cup country beat the United States 2–1 at the 1998 World Cup?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "iran_010",
+          "question": "Which 2026 World Cup country includes the city of Isfahan, famous for bridges and Naqsh-e Jahan Square?",
+          "answer": "Iran",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities & landmarks"
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "country": "Egypt",
+      "accepted_answers": [
+        "Egypt"
+      ],
+      "questions": [
+        {
+          "id": "egypt_001",
+          "question": "Which 2026 World Cup country is home to the Pyramids of Giza and the Sphinx?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Ancient history"
+        },
+        {
+          "id": "egypt_002",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Pharaohs?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "egypt_003",
+          "question": "Which 2026 World Cup country produced Liverpool forward Mohamed Salah?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "egypt_004",
+          "question": "Which 2026 World Cup country’s flag has red, white, and black horizontal stripes with an eagle in the center?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "egypt_005",
+          "question": "Which 2026 World Cup country is crossed by the Nile and has a capital on its banks?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "egypt_006",
+          "question": "Which 2026 World Cup country won a record number of Africa Cup of Nations titles?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "egypt_007",
+          "question": "Which 2026 World Cup country is home to Luxor, Karnak, and the Valley of the Kings?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        },
+        {
+          "id": "egypt_008",
+          "question": "Which 2026 World Cup country’s ancient writing system used hieroglyphs?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & history"
+        },
+        {
+          "id": "egypt_009",
+          "question": "Which 2026 World Cup country made its first World Cup appearance in 1934, the first African team to do so?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "egypt_010",
+          "question": "Which 2026 World Cup country gave its name to a style of cotton famous for long fibers?",
+          "answer": "Egypt",
+          "accepted_answers": [
+            "Egypt"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Products & names"
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "country": "New Zealand",
+      "accepted_answers": [
+        "New Zealand"
+      ],
+      "questions": [
+        {
+          "id": "new_zealand_001",
+          "question": "Which 2026 World Cup country’s football team is nicknamed the All Whites?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "new_zealand_002",
+          "question": "Which 2026 World Cup country is famous for the haka performed by its rugby team, the All Blacks?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Sport culture"
+        },
+        {
+          "id": "new_zealand_003",
+          "question": "Which 2026 World Cup country served as the main filming landscape for The Lord of the Rings films?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Film & geography"
+        },
+        {
+          "id": "new_zealand_004",
+          "question": "Which 2026 World Cup country has a flag with the Union Jack and red stars of the Southern Cross?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "new_zealand_005",
+          "question": "Which 2026 World Cup country has official languages including Māori and sign language?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        },
+        {
+          "id": "new_zealand_006",
+          "question": "Which 2026 World Cup country’s capital is Wellington, while Auckland is its largest city?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "new_zealand_007",
+          "question": "Which 2026 World Cup country went unbeaten at the 2010 World Cup but still failed to advance from its group?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "new_zealand_008",
+          "question": "Which 2026 World Cup country is associated with kiwifruit, pavlova debates, and Māori hangi cooking?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "new_zealand_009",
+          "question": "Which 2026 World Cup country lies in the southwestern Pacific and consists mainly of two large islands?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "new_zealand_010",
+          "question": "Which 2026 World Cup country’s indigenous name Aotearoa is often translated as “land of the long white cloud”?",
+          "answer": "New Zealand",
+          "accepted_answers": [
+            "New Zealand"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "country": "Spain",
+      "accepted_answers": [
+        "Spain"
+      ],
+      "questions": [
+        {
+          "id": "spain_001",
+          "question": "Which 2026 World Cup country won the 2010 tournament with an extra-time goal by Andrés Iniesta?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "spain_002",
+          "question": "Which 2026 World Cup country’s flag is red-yellow-red with a coat of arms near the hoist?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "spain_003",
+          "question": "Which 2026 World Cup country is home to La Liga clubs Real Madrid and Barcelona?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "spain_004",
+          "question": "Which 2026 World Cup country gave the world artists Picasso, Dalí, and Goya?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Art"
+        },
+        {
+          "id": "spain_005",
+          "question": "Which 2026 World Cup country is associated with flamenco, paella, tapas, and the Camino de Santiago?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & food"
+        },
+        {
+          "id": "spain_006",
+          "question": "Which 2026 World Cup country’s capital is Madrid, while Barcelona is the capital of Catalonia?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities"
+        },
+        {
+          "id": "spain_007",
+          "question": "Which 2026 World Cup country co-hosted the 1982 tournament?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "spain_008",
+          "question": "Which 2026 World Cup country has autonomous communities including Andalusia, Galicia, and the Basque Country?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & politics"
+        },
+        {
+          "id": "spain_009",
+          "question": "Which 2026 World Cup country will co-host the 2030 tournament with a western Iberian neighbor and a North African partner?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup future"
+        },
+        {
+          "id": "spain_010",
+          "question": "Which 2026 World Cup country’s national team is commonly called La Roja?",
+          "answer": "Spain",
+          "accepted_answers": [
+            "Spain"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "country": "Uruguay",
+      "accepted_answers": [
+        "Uruguay"
+      ],
+      "questions": [
+        {
+          "id": "uruguay_001",
+          "question": "Which 2026 World Cup country hosted and won the first men’s World Cup in 1930?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "uruguay_002",
+          "question": "Which 2026 World Cup country has won the tournament twice despite having a population smaller than many world cities?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "uruguay_003",
+          "question": "Which 2026 World Cup country’s capital is Montevideo?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "uruguay_004",
+          "question": "Which 2026 World Cup country’s flag includes a Sun of May in the upper-left corner?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "uruguay_005",
+          "question": "Which 2026 World Cup country produced Luis Suárez, Edinson Cavani, and Diego Forlán?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "uruguay_006",
+          "question": "Which 2026 World Cup country defeated the host at the Maracanã in 1950 in one of football’s most famous shocks?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "uruguay_007",
+          "question": "Which 2026 World Cup country is named after a river whose name is often interpreted as “river of painted birds”?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & geography"
+        },
+        {
+          "id": "uruguay_008",
+          "question": "Which 2026 World Cup country is known for mate culture, asado, and candombe drumming?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & food"
+        },
+        {
+          "id": "uruguay_009",
+          "question": "Which 2026 World Cup country sits between Argentina and Brazil on the Atlantic coast?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "uruguay_010",
+          "question": "Which 2026 World Cup country’s national team is nicknamed La Celeste?",
+          "answer": "Uruguay",
+          "accepted_answers": [
+            "Uruguay"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "country": "Saudi Arabia",
+      "accepted_answers": [
+        "Saudi Arabia"
+      ],
+      "questions": [
+        {
+          "id": "saudi_arabia_001",
+          "question": "Which 2026 World Cup country shocked Argentina 2–1 in the 2022 group stage?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "saudi_arabia_002",
+          "question": "Which 2026 World Cup country’s flag carries the shahada and a sword?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "saudi_arabia_003",
+          "question": "Which 2026 World Cup country contains the holy cities of Mecca and Medina?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Religion & geography"
+        },
+        {
+          "id": "saudi_arabia_004",
+          "question": "Which 2026 World Cup country’s capital is Riyadh?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "saudi_arabia_005",
+          "question": "Which 2026 World Cup country is home to clubs such as Al Hilal, Al Nassr, and Al Ittihad?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Club football"
+        },
+        {
+          "id": "saudi_arabia_006",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Green Falcons?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "saudi_arabia_007",
+          "question": "Which 2026 World Cup country occupies most of the Arabian Peninsula?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "saudi_arabia_008",
+          "question": "Which 2026 World Cup country qualified for the knockout stage in 1994 after Saeed Al-Owairan’s famous solo goal?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "saudi_arabia_009",
+          "question": "Which 2026 World Cup country is investing in a futuristic city project called NEOM?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern culture"
+        },
+        {
+          "id": "saudi_arabia_010",
+          "question": "Which 2026 World Cup country takes its modern name from the ruling House of Saud?",
+          "answer": "Saudi Arabia",
+          "accepted_answers": [
+            "Saudi Arabia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & history"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "country": "Cape Verde",
+      "accepted_answers": [
+        "Cape Verde",
+        "Cabo Verde"
+      ],
+      "questions": [
+        {
+          "id": "cape_verde_001",
+          "question": "Which 2026 World Cup country will make its men’s World Cup debut as an Atlantic island nation off West Africa?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "cape_verde_002",
+          "question": "Which 2026 World Cup country’s capital is Praia?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "cape_verde_003",
+          "question": "Which 2026 World Cup country is associated with morna music and singer Cesária Évora?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Music & culture"
+        },
+        {
+          "id": "cape_verde_004",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Blue Sharks?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "cape_verde_005",
+          "question": "Which 2026 World Cup country has a flag with blue stripes and a circle of ten yellow stars?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "cape_verde_006",
+          "question": "Which 2026 World Cup country was once a Portuguese colony and still uses Portuguese officially?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language & history"
+        },
+        {
+          "id": "cape_verde_007",
+          "question": "Which 2026 World Cup country is an archipelago including islands such as Santiago, Sal, and São Vicente?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "cape_verde_008",
+          "question": "Which 2026 World Cup country’s name in Portuguese means “green cape,” referring to a mainland point rather than the islands themselves?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "cape_verde_009",
+          "question": "Which 2026 World Cup country is known for cachupa, a slow-cooked stew of corn, beans, and fish or meat?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "cape_verde_010",
+          "question": "Which 2026 World Cup country qualified historically after topping an African qualifying group including Cameroon?",
+          "answer": "Cape Verde",
+          "accepted_answers": [
+            "Cape Verde",
+            "Cabo Verde"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup qualification"
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "country": "France",
+      "accepted_answers": [
+        "France"
+      ],
+      "questions": [
+        {
+          "id": "france_001",
+          "question": "Which 2026 World Cup country won the men’s tournament in 1998 and 2018?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "france_002",
+          "question": "Which 2026 World Cup country’s flag is a vertical blue, white, and red tricolor?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "france_003",
+          "question": "Which 2026 World Cup country produced Kylian Mbappé, Zinedine Zidane, and Michel Platini?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "france_004",
+          "question": "Which 2026 World Cup country is home to the Louvre, the Eiffel Tower, and the Palace of Versailles?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        },
+        {
+          "id": "france_005",
+          "question": "Which 2026 World Cup country’s national team is nicknamed Les Bleus?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "france_006",
+          "question": "Which 2026 World Cup country is associated with baguettes, croissants, Champagne, and haute cuisine?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food & drink"
+        },
+        {
+          "id": "france_007",
+          "question": "Which 2026 World Cup country hosted the 1998 tournament and won the final 3–0 in Saint-Denis?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "france_008",
+          "question": "Which 2026 World Cup country’s revolution began in 1789 and shaped modern political vocabulary?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "france_009",
+          "question": "Which 2026 World Cup country gave the world cinema pioneers the Lumière brothers?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Film history"
+        },
+        {
+          "id": "france_010",
+          "question": "Which 2026 World Cup country contains regions such as Brittany, Normandy, Provence, and Alsace?",
+          "answer": "France",
+          "accepted_answers": [
+            "France"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "country": "Senegal",
+      "accepted_answers": [
+        "Senegal"
+      ],
+      "questions": [
+        {
+          "id": "senegal_001",
+          "question": "Which 2026 World Cup country beat defending champion France in the opening match of the 2002 tournament?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "senegal_002",
+          "question": "Which 2026 World Cup country’s team is nicknamed the Lions of Teranga?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "senegal_003",
+          "question": "Which 2026 World Cup country produced Sadio Mané, El Hadji Diouf, and Kalidou Koulibaly?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "senegal_004",
+          "question": "Which 2026 World Cup country’s capital is Dakar?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "senegal_005",
+          "question": "Which 2026 World Cup country is known for mbalax music and singer Youssou N’Dour?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Music & culture"
+        },
+        {
+          "id": "senegal_006",
+          "question": "Which 2026 World Cup country’s flag is green, yellow, and red with a green star?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "senegal_007",
+          "question": "Which 2026 World Cup country contains Gorée Island, associated with the history of the Atlantic slave trade?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & landmarks"
+        },
+        {
+          "id": "senegal_008",
+          "question": "Which 2026 World Cup country is named after a river forming part of its northern border?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & geography"
+        },
+        {
+          "id": "senegal_009",
+          "question": "Which 2026 World Cup country won the Africa Cup of Nations for the first time in 2021?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "senegal_010",
+          "question": "Which 2026 World Cup country is famous for thieboudienne, a rice-and-fish dish often considered a national dish?",
+          "answer": "Senegal",
+          "accepted_answers": [
+            "Senegal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "country": "Norway",
+      "accepted_answers": [
+        "Norway"
+      ],
+      "questions": [
+        {
+          "id": "norway_001",
+          "question": "Which 2026 World Cup country returns to the tournament for the first time since 1998?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "norway_002",
+          "question": "Which 2026 World Cup country produced Erling Haaland and Martin Ødegaard?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "norway_003",
+          "question": "Which 2026 World Cup country’s flag is red with a blue Nordic cross outlined in white?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "norway_004",
+          "question": "Which 2026 World Cup country is famous for fjords, the northern lights, and the Lofoten Islands?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "norway_005",
+          "question": "Which 2026 World Cup country’s capital is Oslo?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "norway_006",
+          "question": "Which 2026 World Cup country is associated with Edvard Munch’s painting “The Scream”?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Art"
+        },
+        {
+          "id": "norway_007",
+          "question": "Which 2026 World Cup country was historically linked to Viking exploration and sagas?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "norway_008",
+          "question": "Which 2026 World Cup country gives out the Nobel Peace Prize in its capital?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Institutions"
+        },
+        {
+          "id": "norway_009",
+          "question": "Which 2026 World Cup country is home to the club Molde and has produced managers like Ole Gunnar Solskjær?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "norway_010",
+          "question": "Which 2026 World Cup country’s name is often interpreted as “northern way” or “way to the north”?",
+          "answer": "Norway",
+          "accepted_answers": [
+            "Norway"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "I",
+      "country": "Iraq",
+      "accepted_answers": [
+        "Iraq"
+      ],
+      "questions": [
+        {
+          "id": "iraq_001",
+          "question": "Which 2026 World Cup country returns to the tournament after its only previous appearance in 1986?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "iraq_002",
+          "question": "Which 2026 World Cup country contains ancient Mesopotamian sites between the Tigris and Euphrates rivers?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Ancient history"
+        },
+        {
+          "id": "iraq_003",
+          "question": "Which 2026 World Cup country’s capital is Baghdad?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "iraq_004",
+          "question": "Which 2026 World Cup country won the AFC Asian Cup in 2007 in a celebrated underdog triumph?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "iraq_005",
+          "question": "Which 2026 World Cup country’s flag has red, white, and black horizontal stripes with green Arabic script?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "iraq_006",
+          "question": "Which 2026 World Cup country is associated with the ancient city of Babylon?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Ancient history"
+        },
+        {
+          "id": "iraq_007",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Lions of Mesopotamia?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "iraq_008",
+          "question": "Which 2026 World Cup country is home to the marshlands traditionally inhabited by the Ma’dan people?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & culture"
+        },
+        {
+          "id": "iraq_009",
+          "question": "Which 2026 World Cup country’s name may derive from a region around ancient Uruk?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "iraq_010",
+          "question": "Which 2026 World Cup country shares borders with Iran, Turkey, Syria, Jordan, Saudi Arabia, and Kuwait?",
+          "answer": "Iraq",
+          "accepted_answers": [
+            "Iraq"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "country": "Argentina",
+      "accepted_answers": [
+        "Argentina"
+      ],
+      "questions": [
+        {
+          "id": "argentina_001",
+          "question": "Which 2026 World Cup country won the 2022 tournament after a penalty shootout in Lusail?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "argentina_002",
+          "question": "Which 2026 World Cup country produced Diego Maradona and Lionel Messi?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football icons"
+        },
+        {
+          "id": "argentina_003",
+          "question": "Which 2026 World Cup country’s flag is sky blue and white with the Sun of May?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "argentina_004",
+          "question": "Which 2026 World Cup country is associated with tango, Buenos Aires, and the wide grasslands called the Pampas?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & geography"
+        },
+        {
+          "id": "argentina_005",
+          "question": "Which 2026 World Cup country’s national team is nicknamed La Albiceleste?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "argentina_006",
+          "question": "Which 2026 World Cup country won the tournament on home soil in 1978?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "argentina_007",
+          "question": "Which 2026 World Cup country is home to Patagonia’s glaciers and the wine region of Mendoza?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "argentina_008",
+          "question": "Which 2026 World Cup country gave the world writer Jorge Luis Borges and the dance halls of San Telmo?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Literature & culture"
+        },
+        {
+          "id": "argentina_009",
+          "question": "Which 2026 World Cup country has a name derived from the Latin word for silver?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "argentina_010",
+          "question": "Which 2026 World Cup country is famous for asado, mate, and dulce de leche?",
+          "answer": "Argentina",
+          "accepted_answers": [
+            "Argentina"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "country": "Austria",
+      "accepted_answers": [
+        "Austria"
+      ],
+      "questions": [
+        {
+          "id": "austria_001",
+          "question": "Which 2026 World Cup country returns to the tournament for the first time since 1998?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "austria_002",
+          "question": "Which 2026 World Cup country’s capital is Vienna?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "austria_003",
+          "question": "Which 2026 World Cup country was home to composers Mozart, Schubert, and Johann Strauss?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Classical music"
+        },
+        {
+          "id": "austria_004",
+          "question": "Which 2026 World Cup country’s flag is one of the oldest national flags, with red-white-red horizontal stripes?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "austria_005",
+          "question": "Which 2026 World Cup country is associated with schnitzel, Sachertorte, and coffeehouse culture?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "austria_006",
+          "question": "Which 2026 World Cup country had a famous 1930s football team nicknamed the Wunderteam?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "austria_007",
+          "question": "Which 2026 World Cup country contains much of the eastern Alps and cities like Salzburg and Innsbruck?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "austria_008",
+          "question": "Which 2026 World Cup country was once the center of the Habsburg Empire?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "austria_009",
+          "question": "Which 2026 World Cup country produced footballer David Alaba?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "austria_010",
+          "question": "Which 2026 World Cup country’s German-language name is Österreich, often interpreted as “eastern realm”?",
+          "answer": "Austria",
+          "accepted_answers": [
+            "Austria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "country": "Algeria",
+      "accepted_answers": [
+        "Algeria"
+      ],
+      "questions": [
+        {
+          "id": "algeria_001",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Desert Foxes?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "algeria_002",
+          "question": "Which 2026 World Cup country famously beat West Germany at the 1982 tournament but was eliminated after the “Disgrace of Gijón”?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "algeria_003",
+          "question": "Which 2026 World Cup country is the largest country in Africa by area?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "algeria_004",
+          "question": "Which 2026 World Cup country’s flag is green and white with a red crescent and star?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "algeria_005",
+          "question": "Which 2026 World Cup country’s capital shares the country’s root name and sits on the Mediterranean?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "algeria_006",
+          "question": "Which 2026 World Cup country is associated with raï music and singers such as Khaled?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Music & culture"
+        },
+        {
+          "id": "algeria_007",
+          "question": "Which 2026 World Cup country fought a major war of independence against France, ending in 1962?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Modern history"
+        },
+        {
+          "id": "algeria_008",
+          "question": "Which 2026 World Cup country produced Riyad Mahrez?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "algeria_009",
+          "question": "Which 2026 World Cup country includes much of the Sahara and the ancient city of Timgad?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & history"
+        },
+        {
+          "id": "algeria_010",
+          "question": "Which 2026 World Cup country’s name is linked to “the islands,” referring to small islands once off its capital’s coast?",
+          "answer": "Algeria",
+          "accepted_answers": [
+            "Algeria"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        }
+      ]
+    },
+    {
+      "group": "J",
+      "country": "Jordan",
+      "accepted_answers": [
+        "Jordan"
+      ],
+      "questions": [
+        {
+          "id": "jordan_001",
+          "question": "Which 2026 World Cup country will make its men’s World Cup debut after qualifying from Asia?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "jordan_002",
+          "question": "Which 2026 World Cup country is home to Petra, the rock-cut Nabataean city?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks"
+        },
+        {
+          "id": "jordan_003",
+          "question": "Which 2026 World Cup country’s capital is Amman?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "jordan_004",
+          "question": "Which 2026 World Cup country’s flag has black, white, and green horizontal stripes with a red triangle and white star?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "jordan_005",
+          "question": "Which 2026 World Cup country reached the Asian Cup final in 2023?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "jordan_006",
+          "question": "Which 2026 World Cup country contains Wadi Rum, a desert landscape used in films such as Lawrence of Arabia and The Martian?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Film & geography"
+        },
+        {
+          "id": "jordan_007",
+          "question": "Which 2026 World Cup country is named after a river that flows into the Dead Sea?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & geography"
+        },
+        {
+          "id": "jordan_008",
+          "question": "Which 2026 World Cup country borders Israel, Syria, Iraq, and Saudi Arabia?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "jordan_009",
+          "question": "Which 2026 World Cup country is associated with mansaf, a dish of lamb, rice, and fermented yogurt sauce?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "jordan_010",
+          "question": "Which 2026 World Cup country’s royal dynasty is the Hashemite family?",
+          "answer": "Jordan",
+          "accepted_answers": [
+            "Jordan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & politics"
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "country": "Portugal",
+      "accepted_answers": [
+        "Portugal"
+      ],
+      "questions": [
+        {
+          "id": "portugal_001",
+          "question": "Which 2026 World Cup country produced Cristiano Ronaldo and Eusébio?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football icons"
+        },
+        {
+          "id": "portugal_002",
+          "question": "Which 2026 World Cup country won Euro 2016 despite its star leaving the final injured?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football history"
+        },
+        {
+          "id": "portugal_003",
+          "question": "Which 2026 World Cup country’s flag is green and red with an armillary sphere?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "portugal_004",
+          "question": "Which 2026 World Cup country is home to Lisbon, Porto, and the Algarve?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & cities"
+        },
+        {
+          "id": "portugal_005",
+          "question": "Which 2026 World Cup country is associated with fado music and pastéis de nata?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & food"
+        },
+        {
+          "id": "portugal_006",
+          "question": "Which 2026 World Cup country’s explorers included Vasco da Gama and Ferdinand Magellan?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "portugal_007",
+          "question": "Which 2026 World Cup country will co-host the 2030 tournament with its Iberian neighbor and a North African partner?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup future"
+        },
+        {
+          "id": "portugal_008",
+          "question": "Which 2026 World Cup country’s national team is nicknamed A Seleção das Quinas?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "portugal_009",
+          "question": "Which 2026 World Cup country has Atlantic island regions called Madeira and the Azores?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "portugal_010",
+          "question": "Which 2026 World Cup country’s language is spoken officially in Angola, Mozambique, and a much larger South American nation?",
+          "answer": "Portugal",
+          "accepted_answers": [
+            "Portugal"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Language"
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "country": "Colombia",
+      "accepted_answers": [
+        "Colombia"
+      ],
+      "questions": [
+        {
+          "id": "colombia_001",
+          "question": "Which 2026 World Cup country is associated with coffee regions, cumbia, and the city of Cartagena?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & geography"
+        },
+        {
+          "id": "colombia_002",
+          "question": "Which 2026 World Cup country produced footballers Carlos Valderrama, Radamel Falcao, and James Rodríguez?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "colombia_003",
+          "question": "Which 2026 World Cup country’s flag is yellow, blue, and red, with the yellow stripe taking half the height?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "colombia_004",
+          "question": "Which 2026 World Cup country reached the 2014 quarter-finals after James Rodríguez’s volley against Uruguay?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "colombia_005",
+          "question": "Which 2026 World Cup country is named after Christopher Columbus, even though he never visited it?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "colombia_006",
+          "question": "Which 2026 World Cup country is home to Bogotá, Medellín, Cali, and Barranquilla?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Cities"
+        },
+        {
+          "id": "colombia_007",
+          "question": "Which 2026 World Cup country is associated with writer Gabriel García Márquez and magical realism?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Literature"
+        },
+        {
+          "id": "colombia_008",
+          "question": "Which 2026 World Cup country is the only South American nation with coasts on both the Caribbean Sea and the Pacific Ocean?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "colombia_009",
+          "question": "Which 2026 World Cup country’s national team is nicknamed Los Cafeteros?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "colombia_010",
+          "question": "Which 2026 World Cup country is famous for arepas, bandeja paisa, and ajiaco?",
+          "answer": "Colombia",
+          "accepted_answers": [
+            "Colombia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "country": "Uzbekistan",
+      "accepted_answers": [
+        "Uzbekistan"
+      ],
+      "questions": [
+        {
+          "id": "uzbekistan_001",
+          "question": "Which 2026 World Cup country will make its men’s World Cup debut after years of near misses in Asian qualifying?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "uzbekistan_002",
+          "question": "Which 2026 World Cup country is doubly landlocked, meaning all its neighbors are also landlocked?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "uzbekistan_003",
+          "question": "Which 2026 World Cup country is home to Silk Road cities Samarkand, Bukhara, and Khiva?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & geography"
+        },
+        {
+          "id": "uzbekistan_004",
+          "question": "Which 2026 World Cup country’s capital is Tashkent?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "uzbekistan_005",
+          "question": "Which 2026 World Cup country’s flag has blue, white, and green stripes with a crescent and twelve stars?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "uzbekistan_006",
+          "question": "Which 2026 World Cup country is associated with plov, a rice dish cooked with carrots and meat?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Food"
+        },
+        {
+          "id": "uzbekistan_007",
+          "question": "Which 2026 World Cup country’s name refers to a Turkic people plus a Persian suffix meaning “land of”?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "uzbekistan_008",
+          "question": "Which 2026 World Cup country produced Olympic boxing champions and has become a rising force in Asian football?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Sport culture"
+        },
+        {
+          "id": "uzbekistan_009",
+          "question": "Which 2026 World Cup country contains the shrinking Aral Sea region shared with Kazakhstan?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Environment & geography"
+        },
+        {
+          "id": "uzbekistan_010",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the White Wolves?",
+          "answer": "Uzbekistan",
+          "accepted_answers": [
+            "Uzbekistan"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        }
+      ]
+    },
+    {
+      "group": "K",
+      "country": "DR Congo",
+      "accepted_answers": [
+        "DR Congo",
+        "Democratic Republic of the Congo",
+        "Congo DR",
+        "D.R. Congo"
+      ],
+      "questions": [
+        {
+          "id": "dr_congo_001",
+          "question": "Which 2026 World Cup country returns after its only previous appearance, under a former name, in 1974?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "dr_congo_002",
+          "question": "Which 2026 World Cup country’s capital is Kinshasa, across the river from Brazzaville?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "dr_congo_003",
+          "question": "Which 2026 World Cup country contains much of the Congo Basin rainforest?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "dr_congo_004",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Leopards?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "dr_congo_005",
+          "question": "Which 2026 World Cup country’s flag is blue with a yellow star and a red diagonal stripe edged in yellow?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "dr_congo_006",
+          "question": "Which 2026 World Cup country was once called Zaire?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & names"
+        },
+        {
+          "id": "dr_congo_007",
+          "question": "Which 2026 World Cup country is known for soukous music and the rumba scene of Kinshasa?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Music & culture"
+        },
+        {
+          "id": "dr_congo_008",
+          "question": "Which 2026 World Cup country is Africa’s second-largest by area?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "dr_congo_009",
+          "question": "Which 2026 World Cup country’s minerals include cobalt, a key material for rechargeable batteries?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Economy & geography"
+        },
+        {
+          "id": "dr_congo_010",
+          "question": "Which 2026 World Cup country shares its root name with a large river and an ancient central African kingdom?",
+          "answer": "DR Congo",
+          "accepted_answers": [
+            "DR Congo",
+            "Democratic Republic of the Congo",
+            "Congo DR",
+            "D.R. Congo"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & history"
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "country": "England",
+      "accepted_answers": [
+        "England"
+      ],
+      "questions": [
+        {
+          "id": "england_001",
+          "question": "Which 2026 World Cup country won the 1966 tournament at Wembley?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "england_002",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Three Lions?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "england_003",
+          "question": "Which 2026 World Cup country’s flag is the red cross of St George on white?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "england_004",
+          "question": "Which 2026 World Cup country is home to the Premier League, the FA Cup, and Wembley Stadium?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "england_005",
+          "question": "Which 2026 World Cup country gave the world Shakespeare, The Beatles, and James Bond?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Pop culture"
+        },
+        {
+          "id": "england_006",
+          "question": "Which 2026 World Cup country has a capital crossed by the Thames and home to Big Ben?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "england_007",
+          "question": "Which 2026 World Cup country’s modern name comes from the Angles, a Germanic people?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy"
+        },
+        {
+          "id": "england_008",
+          "question": "Which 2026 World Cup country was knocked out by the “Hand of God” and “Goal of the Century” in 1986?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "england_009",
+          "question": "Which 2026 World Cup country plays home matches at Wembley, rebuilt with a giant arch?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Stadiums"
+        },
+        {
+          "id": "england_010",
+          "question": "Which 2026 World Cup country is one of the four Home Nations, competing separately from Scotland, Wales, and Northern Ireland?",
+          "answer": "England",
+          "accepted_answers": [
+            "England"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football politics"
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "country": "Croatia",
+      "accepted_answers": [
+        "Croatia"
+      ],
+      "questions": [
+        {
+          "id": "croatia_001",
+          "question": "Which 2026 World Cup country reached the 2018 final and finished third in 2022?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "croatia_002",
+          "question": "Which 2026 World Cup country’s flag contains a red-and-white checkerboard shield?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "croatia_003",
+          "question": "Which 2026 World Cup country produced Luka Modrić, winner of the 2018 Ballon d’Or?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "croatia_004",
+          "question": "Which 2026 World Cup country is known for the Dalmatian coast, Dubrovnik, and Split?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography & cities"
+        },
+        {
+          "id": "croatia_005",
+          "question": "Which 2026 World Cup country’s national team is nicknamed Vatreni, meaning “The Fiery Ones”?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "croatia_006",
+          "question": "Which 2026 World Cup country appeared as an independent nation at the World Cup for the first time in 1998 and finished third?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "croatia_007",
+          "question": "Which 2026 World Cup country’s necktie origin story is linked to 17th-century soldiers from its region?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Fashion & names"
+        },
+        {
+          "id": "croatia_008",
+          "question": "Which 2026 World Cup country contains Plitvice Lakes National Park?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Nature"
+        },
+        {
+          "id": "croatia_009",
+          "question": "Which 2026 World Cup country borders Slovenia, Hungary, Serbia, Bosnia and Herzegovina, and Montenegro?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "croatia_010",
+          "question": "Which 2026 World Cup country uses the kuna historically as a symbol, though it adopted the euro in 2023?",
+          "answer": "Croatia",
+          "accepted_answers": [
+            "Croatia"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Currency & symbols"
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "country": "Panama",
+      "accepted_answers": [
+        "Panama"
+      ],
+      "questions": [
+        {
+          "id": "panama_001",
+          "question": "Which 2026 World Cup country is famous for a canal linking the Atlantic and Pacific oceans?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Landmarks & geography"
+        },
+        {
+          "id": "panama_002",
+          "question": "Which 2026 World Cup country made its first men’s World Cup appearance in 2018?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "panama_003",
+          "question": "Which 2026 World Cup country’s capital shares the country’s name and has a skyline near a historic old quarter?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "panama_004",
+          "question": "Which 2026 World Cup country’s flag has red and blue quarters with two stars?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "panama_005",
+          "question": "Which 2026 World Cup country’s national team is nicknamed Los Canaleros?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "panama_006",
+          "question": "Which 2026 World Cup country connects Central America to South America via the Darién region?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        },
+        {
+          "id": "panama_007",
+          "question": "Which 2026 World Cup country is associated with hats whose name is misleading because they were traditionally made in Ecuador?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Names & products"
+        },
+        {
+          "id": "panama_008",
+          "question": "Which 2026 World Cup country used the US dollar alongside the balboa in everyday commerce?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Currency"
+        },
+        {
+          "id": "panama_009",
+          "question": "Which 2026 World Cup country is home to Bocas del Toro and the San Blas/Guna Yala islands?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Travel & geography"
+        },
+        {
+          "id": "panama_010",
+          "question": "Which 2026 World Cup country qualified for 2018 with a dramatic final-day win over Costa Rica?",
+          "answer": "Panama",
+          "accepted_answers": [
+            "Panama"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup qualification"
+        }
+      ]
+    },
+    {
+      "group": "L",
+      "country": "Ghana",
+      "accepted_answers": [
+        "Ghana"
+      ],
+      "questions": [
+        {
+          "id": "ghana_001",
+          "question": "Which 2026 World Cup country’s national team is nicknamed the Black Stars?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football culture"
+        },
+        {
+          "id": "ghana_002",
+          "question": "Which 2026 World Cup country reached the 2010 World Cup quarter-finals and nearly became Africa’s first semi-finalist?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "World Cup history"
+        },
+        {
+          "id": "ghana_003",
+          "question": "Which 2026 World Cup country’s flag is red, yellow, and green with a black star in the center?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Flags & symbols"
+        },
+        {
+          "id": "ghana_004",
+          "question": "Which 2026 World Cup country was the first sub-Saharan African colony to gain independence, in 1957?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History"
+        },
+        {
+          "id": "ghana_005",
+          "question": "Which 2026 World Cup country’s capital is Accra?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Capital cities"
+        },
+        {
+          "id": "ghana_006",
+          "question": "Which 2026 World Cup country is associated with kente cloth, highlife music, and jollof rice rivalries?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Culture & food"
+        },
+        {
+          "id": "ghana_007",
+          "question": "Which 2026 World Cup country was named after an ancient West African empire, though the modern state lies farther south?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Anthroponymy & history"
+        },
+        {
+          "id": "ghana_008",
+          "question": "Which 2026 World Cup country produced footballers Abedi Pelé, Michael Essien, and Asamoah Gyan?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Football personalities"
+        },
+        {
+          "id": "ghana_009",
+          "question": "Which 2026 World Cup country has historic coastal forts such as Elmina Castle?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "History & landmarks"
+        },
+        {
+          "id": "ghana_010",
+          "question": "Which 2026 World Cup country borders Côte d’Ivoire, Burkina Faso, and Togo?",
+          "answer": "Ghana",
+          "accepted_answers": [
+            "Ghana"
+          ],
+          "difficulty": "medium-hard",
+          "category": "Geography"
+        }
+      ]
+    }
+  ]
+}
