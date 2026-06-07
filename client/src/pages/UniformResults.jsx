@@ -19,17 +19,13 @@ export default function UniformResults() {
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
   const [leaders, setLeaders] = useState(null);
 
-  const shareText = `WC 2026 Quiz\n${shareUrl}`;
+  const shareText = shareUrl;
 
   async function share() {
     const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent || '');
     try {
       if (isMobile && navigator.share) {
-        await navigator.share({
-          title: 'WC 2026 Quiz',
-          text: 'WC 2026 Quiz',
-          url: shareUrl,
-        });
+        await navigator.share({ url: shareUrl });
       } else if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(shareText);
       } else {
