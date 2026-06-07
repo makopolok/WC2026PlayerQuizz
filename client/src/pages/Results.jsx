@@ -12,6 +12,7 @@ export default function Results() {
   const { shareId, totalScore, players, guesses } = state;
   const shareUrl = `${window.location.origin}/share/${shareId}`;
   const [playerName, setPlayerName] = useState('');
+  const [copied, setCopied] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [savedScore, setSavedScore] = useState(false);
@@ -28,12 +29,10 @@ export default function Results() {
   const shareText = `${taunt}\n\n${shareUrl}`;
 
   function share() {
-    if (navigator.share) {
-      navigator.share({ text: shareText }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(shareText);
-      alert('Copied to clipboard!');
-    }
+    navigator.clipboard.writeText(shareText).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
   }
 
   async function submitLeaderboardScore() {
@@ -138,7 +137,7 @@ export default function Results() {
           onClick={share}
           className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
         >
-          📲 Challenge a Friend
+          {copied ? '✅ Copied!' : '📲 Challenge a Friend'}
         </button>
         <button
           onClick={() => navigate('/')}
