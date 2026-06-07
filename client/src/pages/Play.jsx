@@ -18,6 +18,7 @@ export default function Play() {
   const [revealedCountry, setRevealedCountry] = useState(null);
   const [usedCountries, setUsedCountries] = useState([]);
   const [guessError, setGuessError] = useState(null);
+  const [hint, setHint] = useState(null);
 
   useEffect(() => {
     if (!players) navigate('/');
@@ -83,6 +84,7 @@ export default function Play() {
 
         setTimeout(() => advance(updatedGuesses), 2500);
       } else {
+        if (data.hint) setHint(data.hint);
         setFeedback('wrong');
         setAttemptNumber(a => a + 1);
         setTimeout(() => setFeedback(null), 800);
@@ -96,6 +98,7 @@ export default function Play() {
     setRevealed(false);
     setAttemptNumber(1);
     setUsedCountries([]);
+    setHint(null);
 
     if (isLastPlayer) {
       completeGame(updatedGuesses);
@@ -146,11 +149,11 @@ export default function Play() {
           <span className="text-sm text-gray-400">{currentPlayer.position}</span>
         )}
 
-        {/* Club hint — shown only on the 3rd attempt */}
-        {!revealed && attemptNumber === 3 && currentPlayer.club && (
+        {/* Trivia hint — shown on the 3rd attempt */}
+        {!revealed && attemptNumber === 3 && hint && (
           <div className="bg-yellow-400/10 border border-yellow-400/40 rounded-xl px-4 py-2 text-center">
             <span className="text-xs text-yellow-300 font-semibold uppercase tracking-wide">💡 Hint</span>
-            <p className="text-sm text-yellow-200 mt-0.5">Club: <strong>{currentPlayer.club}</strong></p>
+            <p className="text-sm text-yellow-200 mt-0.5">{hint}</p>
           </div>
         )}
 

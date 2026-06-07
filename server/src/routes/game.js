@@ -9,8 +9,14 @@ const router = express.Router();
 const PLAYERS_PER_GAME = 7;
 const POINTS = { 1: 3, 2: 2, 3: 1 }; // attempt number → points
 const playersPath = path.join(__dirname, '../../../data/players.json');
+const triviaPath = path.join(__dirname, '../../../data/world_cup_2026_country_guess_pub_quiz_answers_are_countries.json');
 
 const playersByCountry = JSON.parse(fs.readFileSync(playersPath, 'utf8'));
+const triviaData = JSON.parse(fs.readFileSync(triviaPath, 'utf8'));
+// Map country name (lowercase) → array of question strings
+const triviaByCountry = new Map(
+  triviaData.countries.map(c => [c.country.toLowerCase(), c.questions.map(q => q.question)])
+);
 const countryLookup = new Map(Object.keys(playersByCountry).map(country => [country.toLowerCase(), country]));
 const allPlayers = Object.entries(playersByCountry).flatMap(([country, players]) =>
   players.map(player => ({
@@ -50,12 +56,11 @@ function createGameSession(selectedPlayers) {
 
   return {
     sessionId,
-    players: selectedPlayers.map(({ id, name, photo_url, position, club }) => ({
+    players: selectedPlayers.map(({ id, name, photo_url, position }) => ({
       id,
       name,
       photo_url,
       position,
-      club,
     })),
   };
 }
@@ -195,11 +200,20 @@ router.post('/guess', async (req, res) => {
     // Reveal the country on correct guess or on the final (3rd) wrong attempt
     const revealCountry = correct || attemptNumber === 3;
 
+    // On 2nd wrong attempt, pick a random trivia question as a hint for attempt 3
+    let hint = null;
+    if (!correct && attemptNumber === 2) {
+      const questions = triviaByCountry.get(player.country.toLowerCase()) || [];
+      if (questions.length) {
+        hint = questions[Math.floor(Math.random() * questions.length)];
+      }
+    }
+
     if (!correct) {
       session.used_guesses[playerId] = [...usedGuesses, normalizedGuess];
     }
 
-    res.json({ correct, points, country: revealCountry ? player.country : null });
+    res.json({ correct, points, country: revealCountry ? player.country : null, hint });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to process guess.' });
