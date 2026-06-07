@@ -8,7 +8,9 @@ const router = express.Router();
 
 const UNIFORMS_PER_GAME = 5;
 const POINTS = { 1: 3, 2: 2, 3: 1 };
-const uniformsDir = path.join(__dirname, '../../../data/48_uniforms');
+const webpDir = path.join(__dirname, '../../../data/48_uniforms_webp');
+const pngDir = path.join(__dirname, '../../../data/48_uniforms');
+const uniformsDir = fs.existsSync(webpDir) ? webpDir : pngDir;
 
 const COUNTRY_ALIASES = {
   bosnia: 'Bosnia and Herzegovina',
