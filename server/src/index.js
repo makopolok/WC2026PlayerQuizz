@@ -4,6 +4,7 @@ const cors = require('cors');
 const path = require('path');
 
 const gameRoutes = require('./routes/game');
+const uniformRoutes = require('./routes/uniforms');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -13,6 +14,8 @@ app.use(express.json());
 
 // API routes
 app.use('/api', gameRoutes);
+app.use('/api', uniformRoutes);
+app.use('/uniforms', express.static(path.join(__dirname, '../../data/48_uniforms')));
 
 // Serve React build in production
 if (process.env.NODE_ENV === 'production') {

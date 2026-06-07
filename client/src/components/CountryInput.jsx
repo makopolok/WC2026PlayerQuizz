@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 
-export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCountries = [] }) {
+export default function CountryInput({
+  onSubmit,
+  onInvalid,
+  disabled,
+  excludedCountries = [],
+  countriesEndpoint = '/api/countries',
+}) {
   const [typed, setTyped] = useState('');
   const [countries, setCountries] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -9,10 +15,10 @@ export default function CountryInput({ onSubmit, onInvalid, disabled, excludedCo
   const listRef = useRef(null);
 
   useEffect(() => {
-    fetch('/api/countries')
+    fetch(countriesEndpoint)
       .then(r => r.json())
       .then(setCountries);
-  }, []);
+  }, [countriesEndpoint]);
 
   useEffect(() => {
     if (!disabled) {
