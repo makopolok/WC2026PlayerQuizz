@@ -18,6 +18,28 @@ const triviaByCountry = new Map(
   triviaData.countries.map(c => [c.country.toLowerCase(), c.questions.map(q => q.question)])
 );
 const countryLookup = new Map(Object.keys(playersByCountry).map(country => [country.toLowerCase(), country]));
+
+const CONFEDERATION_MAP = {
+  // UEFA
+  UEFA: ['Albania','Austria','Belgium','Croatia','Czechia','Denmark','England','France','Germany','Hungary','Italy','Netherlands','Poland','Portugal','Romania','Scotland','Serbia','Slovakia','Slovenia','Spain','Switzerland','Turkey','Ukraine','Wales'],
+  // CONMEBOL
+  CONMEBOL: ['Argentina','Bolivia','Brazil','Chile','Colombia','Ecuador','Paraguay','Peru','Uruguay','Venezuela'],
+  // CONCACAF
+  CONCACAF: ['Canada','Costa Rica','Honduras','Jamaica','Mexico','Panama','Trinidad and Tobago','United States'],
+  // CAF
+  CAF: ['Algeria','Cameroon','DR Congo','Egypt','Ghana','Guinea','Kenya','Mali','Morocco','Nigeria','Senegal','South Africa','Tanzania','Tunisia'],
+  // AFC
+  AFC: ['Australia','China','Indonesia','Iran','Iraq','Japan','Jordan','Qatar','Saudi Arabia','South Korea','Uzbekistan'],
+  // OFC
+  OFC: ['New Zealand'],
+};
+// Build reverse lookup: country → confederation
+const countryConfederation = new Map();
+for (const [conf, countries] of Object.entries(CONFEDERATION_MAP)) {
+  for (const country of countries) {
+    countryConfederation.set(country.toLowerCase(), conf);
+  }
+}
 const allPlayers = Object.entries(playersByCountry).flatMap(([country, players]) =>
   players.map(player => ({
     id: `${country}-${player.number}`,
@@ -213,10 +235,15 @@ router.post('/guess', async (req, res) => {
     const revealCountry = correct || attemptNumber === 3;
 
     let hint = null;
-    if (!correct && attemptNumber === 2) {
+    let hintType = null;
+    if (!correct && attemptNumber === 1) {
+      const conf = countryConfederation.get(player.country.toLowerCase());
+      if (conf) { hint = conf; hintType = 'confederation'; }
+    } else if (!correct && attemptNumber === 2) {
       const questions = triviaByCountry.get(player.country.toLowerCase()) || [];
       if (questions.length) {
         hint = questions[Math.floor(Math.random() * questions.length)];
+        hintType = 'trivia';
       }
     }
 
@@ -225,7 +252,7 @@ router.post('/guess', async (req, res) => {
       await pool.query(`UPDATE game_sessions SET used_guesses = $1 WHERE id = $2`, [JSON.stringify(updatedUsed), sessionId]);
     }
 
-    res.json({ correct, points, country: revealCountry ? player.country : null, hint });
+    res.json({ correct, points, country: revealCountry ? player.country : null, hint, hintType });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to process guess.' });
