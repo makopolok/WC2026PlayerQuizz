@@ -19,21 +19,32 @@ export default function Results() {
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
   const [leaders, setLeaders] = useState(null);
 
-  const TAUNTS = [
-    `I scored ${totalScore}/${MAX_SCORE} on this WC2026 quiz… and I'm not even sorry 😤 Think you can beat that?`,
-    `${totalScore}/${MAX_SCORE} points. I basically know every World Cup squad by heart at this point 🧠⚽ Your turn!`,
-    `Just scored ${totalScore}/${MAX_SCORE} on the WC2026 player quiz. Easy. 😏 Let's see you try.`,
-    `${totalScore} out of ${MAX_SCORE}. Could be better, could be worse. Mostly better than you probably 😂 Prove me wrong!`,
-    `Me: ${totalScore}/${MAX_SCORE}. You: ??? 👀 Same quiz, same players. No excuses.`,
-  ];
-  const taunt = TAUNTS[totalScore % TAUNTS.length];
-  const shareText = `${taunt}\n\n${shareUrl}`;
+  const shareText = `WC 2026 Quiz\n${shareUrl}`;
 
-  function share() {
-    navigator.clipboard.writeText(shareText).then(() => {
+  async function share() {
+    const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent || '');
+    try {
+      if (isMobile && navigator.share) {
+        await navigator.share({
+          title: 'WC 2026 Quiz',
+          text: 'WC 2026 Quiz',
+          url: shareUrl,
+        });
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareText);
+      } else {
+        throw new Error('Clipboard unavailable');
+      }
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    });
+    } catch (err) {
+      if (err?.name === 'AbortError') return;
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareText);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      }
+    }
   }
 
   async function submitLeaderboardScore() {
@@ -150,12 +161,12 @@ export default function Results() {
 
       </div>
       <div className="flex flex-col items-center gap-3 mt-4">
-        <p className="text-gray-400 text-sm">Challenge your friends with the same quiz!</p>
+        <p className="text-gray-400 text-sm">Share your score and invite friends to play.</p>
         <button
           onClick={share}
           className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
         >
-          {copied ? '✅ Copied!' : '📲 Challenge a Friend'}
+          {copied ? '✅ Shared!' : '📲 Share Quiz'}
         </button>
         <button
           onClick={() => navigate('/')}

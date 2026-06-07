@@ -19,19 +19,32 @@ export default function UniformResults() {
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
   const [leaders, setLeaders] = useState(null);
 
-  const TAUNTS = [
-    `I scored ${totalScore}/${MAX_SCORE} in the WC2026 uniform challenge 👕⚽ Can you beat that?`,
-    `${totalScore}/${MAX_SCORE} on guessing national team shirts. Drip expert mode unlocked 😎`,
-    `Uniform quiz result: ${totalScore}/${MAX_SCORE}. Same 5 kits, same rules. Your turn!`,
-    `I got ${totalScore}/${MAX_SCORE} on WC2026 kits. Try it and send me your score.`,
-  ];
-  const shareText = `${TAUNTS[totalScore % TAUNTS.length]}\n\n${shareUrl}`;
+  const shareText = `WC 2026 Quiz\n${shareUrl}`;
 
-  function share() {
-    navigator.clipboard.writeText(shareText).then(() => {
+  async function share() {
+    const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent || '');
+    try {
+      if (isMobile && navigator.share) {
+        await navigator.share({
+          title: 'WC 2026 Quiz',
+          text: 'WC 2026 Quiz',
+          url: shareUrl,
+        });
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareText);
+      } else {
+        throw new Error('Clipboard unavailable');
+      }
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    });
+    } catch (err) {
+      if (err?.name === 'AbortError') return;
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareText);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      }
+    }
   }
 
   async function submitLeaderboardScore() {
@@ -140,12 +153,12 @@ export default function UniformResults() {
       </div>
 
       <div className="flex flex-col items-center gap-3 mt-4">
-        <p className="text-gray-400 text-sm">Challenge your friends with the same uniform quiz!</p>
+        <p className="text-gray-400 text-sm">Share your score and invite friends to play.</p>
         <button
           onClick={share}
           className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-8 rounded-full transition"
         >
-          {copied ? '✅ Copied!' : '📲 Challenge a Friend'}
+          {copied ? '✅ Shared!' : '📲 Share Quiz'}
         </button>
         <button
           onClick={() => navigate('/')}
