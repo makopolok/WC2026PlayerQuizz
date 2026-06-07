@@ -40,11 +40,11 @@ function slugToCountry(slug) {
 
 const uniformFiles = fs
   .readdirSync(uniformsDir)
-  .filter(name => name.endsWith('_worldcup_card.png'))
+  .filter(name => /_worldcup_card\.(png|webp)$/i.test(name))
   .sort((a, b) => a.localeCompare(b));
 
 const uniforms = uniformFiles.map((fileName) => {
-  const slug = fileName.replace('_worldcup_card.png', '');
+  const slug = fileName.replace(/_worldcup_card\.(png|webp)$/i, '');
   return {
     id: slug,
     country: slugToCountry(slug),
