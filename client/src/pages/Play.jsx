@@ -146,6 +146,14 @@ export default function Play() {
           <span className="text-sm text-gray-400">{currentPlayer.position}</span>
         )}
 
+        {/* Club hint — shown only on the 3rd attempt */}
+        {!revealed && attemptNumber === 3 && currentPlayer.club && (
+          <div className="bg-yellow-400/10 border border-yellow-400/40 rounded-xl px-4 py-2 text-center">
+            <span className="text-xs text-yellow-300 font-semibold uppercase tracking-wide">💡 Hint</span>
+            <p className="text-sm text-yellow-200 mt-0.5">Club: <strong>{currentPlayer.club}</strong></p>
+          </div>
+        )}
+
         {/* Revealed country */}
         {revealed && (
           <div className={`text-lg font-semibold ${feedback === 'correct' ? 'text-green-400' : 'text-red-400'}`}>

@@ -50,11 +50,12 @@ function createGameSession(selectedPlayers) {
 
   return {
     sessionId,
-    players: selectedPlayers.map(({ id, name, photo_url, position }) => ({
+    players: selectedPlayers.map(({ id, name, photo_url, position, club }) => ({
       id,
       name,
       photo_url,
       position,
+      club,
     })),
   };
 }
