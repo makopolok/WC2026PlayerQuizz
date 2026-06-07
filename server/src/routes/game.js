@@ -21,13 +21,13 @@ const countryLookup = new Map(Object.keys(playersByCountry).map(country => [coun
 
 const CONFEDERATION_MAP = {
   // UEFA
-  UEFA: ['Albania','Austria','Belgium','Croatia','Czechia','Denmark','England','France','Germany','Hungary','Italy','Netherlands','Poland','Portugal','Romania','Scotland','Serbia','Slovakia','Slovenia','Spain','Switzerland','Turkey','Ukraine','Wales'],
+  UEFA: ['Albania','Austria','Belgium','Bosnia and Herzegovina','Croatia','Czechia','Denmark','England','France','Germany','Hungary','Italy','Netherlands','Norway','Poland','Portugal','Romania','Scotland','Serbia','Slovakia','Slovenia','Spain','Sweden','Switzerland','Turkey','Ukraine','Wales'],
   // CONMEBOL
   CONMEBOL: ['Argentina','Bolivia','Brazil','Chile','Colombia','Ecuador','Paraguay','Peru','Uruguay','Venezuela'],
   // CONCACAF
-  CONCACAF: ['Canada','Costa Rica','Honduras','Jamaica','Mexico','Panama','Trinidad and Tobago','United States'],
+  CONCACAF: ['Canada','Costa Rica','Curaçao','Haiti','Honduras','Jamaica','Mexico','Panama','Trinidad and Tobago','United States'],
   // CAF
-  CAF: ['Algeria','Cameroon','DR Congo','Egypt','Ghana','Guinea','Kenya','Mali','Morocco','Nigeria','Senegal','South Africa','Tanzania','Tunisia'],
+  CAF: ['Algeria','Cameroon','Cape Verde','DR Congo','Egypt','Ghana','Guinea','Ivory Coast','Kenya','Mali','Morocco','Nigeria','Senegal','South Africa','Tanzania','Tunisia'],
   // AFC
   AFC: ['Australia','China','Indonesia','Iran','Iraq','Japan','Jordan','Qatar','Saudi Arabia','South Korea','Uzbekistan'],
   // OFC
