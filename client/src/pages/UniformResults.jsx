@@ -19,13 +19,24 @@ export default function UniformResults() {
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
   const [leaders, setLeaders] = useState(null);
 
-  const shareText = shareUrl;
+  const TAUNTS = [
+    `I scored ${totalScore}/${MAX_SCORE} on the WC 2026 uniforms quiz. Can you beat it?`,
+    `${totalScore}/${MAX_SCORE} in the uniforms challenge. Your turn.`,
+    `I got ${totalScore}/${MAX_SCORE} guessing kits on WC 2026 Quiz. Beat that.`,
+    `Score to beat: ${totalScore}/${MAX_SCORE}. Same uniforms, same rules.`,
+  ];
+  const taunt = TAUNTS[totalScore % TAUNTS.length];
+  const shareText = `${taunt}\n\n${shareUrl}`;
 
   async function share() {
     const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent || '');
     try {
       if (isMobile && navigator.share) {
-        await navigator.share({ url: shareUrl });
+        await navigator.share({
+          title: 'WC 2026 Quiz',
+          text: taunt,
+          url: shareUrl,
+        });
       } else if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(shareText);
       } else {

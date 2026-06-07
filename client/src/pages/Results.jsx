@@ -19,13 +19,24 @@ export default function Results() {
   const [leaderboardMessage, setLeaderboardMessage] = useState(null);
   const [leaders, setLeaders] = useState(null);
 
-  const shareText = shareUrl;
+  const TAUNTS = [
+    `I scored ${totalScore}/${MAX_SCORE} on WC 2026 Quiz. Think you can beat that?`,
+    `${totalScore}/${MAX_SCORE} points on the players challenge. Your turn now.`,
+    `I just got ${totalScore}/${MAX_SCORE} on WC 2026 Quiz. Can you top it?`,
+    `Score to beat: ${totalScore}/${MAX_SCORE}. Same quiz, same rules.`,
+  ];
+  const taunt = TAUNTS[totalScore % TAUNTS.length];
+  const shareText = `${taunt}\n\n${shareUrl}`;
 
   async function share() {
     const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent || '');
     try {
       if (isMobile && navigator.share) {
-        await navigator.share({ url: shareUrl });
+        await navigator.share({
+          title: 'WC 2026 Quiz',
+          text: taunt,
+          url: shareUrl,
+        });
       } else if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(shareText);
       } else {
