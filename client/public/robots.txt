@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /play
+Allow: /results
+Allow: /uniforms
+Allow: /uniform-results
+Disallow: /api/
+Sitemap: https://wc2026quiz.com/sitemap.xml
